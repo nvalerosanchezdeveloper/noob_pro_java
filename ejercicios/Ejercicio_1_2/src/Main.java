@@ -11,8 +11,8 @@ public class Main {
         double area = base * height;
         double perimeter = 2*(base + height);
 
-        System.out.printf("Área del rectángulo: %2f%n" +
-                         "Perímetro del rectángulo: %2f%n", area, perimeter);
+        System.out.printf("Área del rectángulo: %.2f%n" +
+                         "Perímetro del rectángulo: %.2f%n", area, perimeter);
 
         int rectangles = (int)(100/area);
         System.out.printf("Número de rectángulos que caben: %d%n", rectangles);
