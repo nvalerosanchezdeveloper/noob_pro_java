@@ -27,6 +27,34 @@ public class Main {
             System.out.println();
         }
 
+        //b)
+
+        int number = 97;
+        boolean primeNumber = true;
+
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                System.out.println("Divisor encontrado: " + i);
+                primeNumber = false;
+                break;
+            }
+        }
+
+        if (primeNumber) {
+            System.out.println("Es primo");
+        } else {
+            System.out.println("No es primo");
+        }
+
+        //c)
+
+        for (int i = 1; i <= 50; i++) {
+            if (i % 3 == 0 || i % 7 == 0) {
+                continue;
+            }
+            System.out.print(i + " ");
+        }
+
 
 
     }
