@@ -12,10 +12,9 @@ import lib.in;
 public class Main {
     public static void main(String[] args) {
 
-        sum();
-        sub();
-        multiplication();
-        division();
+        select();
+
+
 
 
 
@@ -23,17 +22,21 @@ public class Main {
 
     }
     //region SELECT
-    public static int select(){
+    public static void select(){
         String select = in.leerLine("Please, choose between (sum, sub, mult or div): ");
-        if (select == sum()){
+
+
+
+        if (select.equals("sum")){
             sum();
-        } else if (select == sub){
+        } else if (select.equals("sub")){
             sub();
-        } else if (select == multiplication){
+        } else if (select.equals("mult")){
             multiplication();
-        } else (select == division){
+        } else if (select.equals("div")){
             division();
         }
+
     }
     //endregion
     //region INPUT
