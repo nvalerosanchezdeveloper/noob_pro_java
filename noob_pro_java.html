@@ -1,0 +1,3043 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noob_pro_java</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background: #fff;
+        }
+        @media print {
+            body { margin: 0; padding: 0; }
+            .container { max-width: 100%; margin: 0; padding: 1cm; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin: 24px 0 16px 0;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h3 { font-size: 1.25em; }
+        h4 { font-size: 1em; }
+        h5 { font-size: 0.875em; }
+        h6 { font-size: 0.85em; color: #6a737d; }
+        p {
+            margin-bottom: 16px;
+        }
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 85%;
+            color: #24292e;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+            margin-bottom: 16px;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #24292e;
+            display: block;
+        }
+        blockquote {
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+            margin: 0 0 16px 0;
+        }
+        blockquote p {
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        table th {
+            background-color: #f6f8fa;
+            border: 1px solid #ddd;
+            padding: 6px 13px;
+            font-weight: 600;
+        }
+        table td {
+            border: 1px solid #ddd;
+            padding: 6px 13px;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        hr {
+            background-color: #e1e4e8;
+            border: 0;
+            height: 2px;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="java-de-noob-a-pro-guia-completa-con-explicaciones-detalladas">🚀 JAVA: DE NOOB A PRO — Guía Completa con Explicaciones Detalladas</h1>
+<blockquote>
+<p><strong>Tu misión:</strong> Convertirte en un desarrollador Java de élite. Cada nivel construye sobre el anterior. Cada tema está explicado desde cero, con ejemplos, analogías y ejercicios prácticos. No saltes niveles.</p>
+</blockquote>
+<hr />
+<h2 id="indice-de-niveles">📌 ÍNDICE DE NIVELES</h2>
+<ul>
+<li>🟢 <strong>NIVEL 1 — Novato Absoluto</strong> (Fundamentos del lenguaje)</li>
+<li>🔵 <strong>NIVEL 2 — Aprendiz</strong> (Programación Orientada a Objetos)</li>
+<li>🟡 <strong>NIVEL 3 — Intermedio</strong> (Colecciones, Excepciones y E/S)</li>
+<li>🟠 <strong>NIVEL 4 — Avanzado</strong> (Concurrencia, Genéricos y Streams)</li>
+<li>🔴 <strong>NIVEL 5 — Experto</strong> (JVM internals, Patrones, Arquitectura)</li>
+<li>⚫ <strong>NIVEL 6 — Pro Absoluto</strong> (Rendimiento, Metaprogramación, Ecosistema)</li>
+</ul>
+<hr />
+<h2 id="nivel-1-novato-absoluto">🟢 NIVEL 1 — NOVATO ABSOLUTO</h2>
+<hr />
+<h3 id="tema-11-que-es-java-entorno-y-herramientas">Tema 1.1 — ¿Qué es Java? Entorno y herramientas</h3>
+<h4 id="que-es-java-y-por-que-aprenderlo">¿Qué es Java y por qué aprenderlo?</h4>
+<p>Java es un lenguaje de programación creado en 1995 por James Gosling en Sun Microsystems (hoy Oracle). Su filosofía central es <strong>"Write Once, Run Anywhere"</strong> (escribe una vez, ejecuta en cualquier lugar). Esto significa que el código que escribes en tu ordenador puede ejecutarse en cualquier sistema operativo (Windows, Linux, macOS, Android...) sin modificarlo.</p>
+<p>¿Por qué es tan popular? Java es el lenguaje detrás de miles de aplicaciones bancarias, sistemas empresariales, Android, y mucho más. Aprenderlo te abre muchísimas puertas laborales.</p>
+<h4 id="jdk-vs-jre-vs-jvm-que-es-cada-cosa">JDK vs JRE vs JVM — ¿Qué es cada cosa?</h4>
+<p>Esta es la primera confusión que tiene todo el mundo. Imagina una analogía:</p>
+<ul>
+<li>
+<p><strong>JVM (Java Virtual Machine)</strong> → Es como un "intérprete universal". Cuando tú escribes código Java, no se convierte directamente en instrucciones para tu procesador. Primero se convierte en un lenguaje intermedio llamado <strong>bytecode</strong>, y la JVM es quien lee ese bytecode y lo ejecuta en tu máquina. Por eso Java funciona en cualquier sistema: cada sistema tiene su propia JVM que sabe cómo ejecutar el mismo bytecode.</p>
+</li>
+<li>
+<p><strong>JRE (Java Runtime Environment)</strong> → Es la JVM + las librerías estándar de Java. Es lo que necesitas para <strong>ejecutar</strong> un programa Java ya compilado. Si solo quieres usar una aplicación Java (como Minecraft), solo necesitas el JRE.</p>
+</li>
+<li>
+<p><strong>JDK (Java Development Kit)</strong> → Es el JRE + herramientas para <strong>desarrollar</strong>. Incluye el compilador (<code>javac</code>), depurador, y mucho más. Si quieres <strong>escribir y compilar</strong> código Java, necesitas el JDK. <strong>Tú necesitas el JDK.</strong></p>
+</li>
+</ul>
+<pre class="codehilite"><code>JDK (lo que instalarás)
+├── JRE (para ejecutar)
+│   ├── JVM (la máquina virtual)
+│   └── Librerías estándar (java.util, java.io, etc.)
+└── Herramientas de desarrollo
+    ├── javac (compilador)
+    ├── java (ejecutor)
+    ├── javadoc (generador de documentación)
+    └── jdb (depurador)
+</code></pre>
+
+<h4 id="como-funciona-el-proceso-de-compilacion">Cómo funciona el proceso de compilación</h4>
+<pre class="codehilite"><code>Tu código (.java)  →  javac (compilador)  →  Bytecode (.class)  →  JVM  →  Ejecución
+</code></pre>
+
+<ol>
+<li>Escribes código en un archivo <code>HolaMundo.java</code></li>
+<li>El compilador <code>javac HolaMundo.java</code> lo convierte a <code>HolaMundo.class</code> (bytecode)</li>
+<li>La JVM ejecuta ese bytecode con <code>java HolaMundo</code></li>
+</ol>
+<h4 id="tu-primer-programa">Tu primer programa</h4>
+<pre class="codehilite"><code class="language-java">// Todo programa Java vive dentro de una clase
+// El nombre de la clase DEBE coincidir con el nombre del archivo: HolaMundo.java
+public class HolaMundo {
+
+    // Este es el punto de entrada de cualquier programa Java
+    // La JVM busca exactamente este método para empezar la ejecución
+    // public = accesible desde cualquier lugar
+    // static = pertenece a la clase, no a un objeto
+    // void = no devuelve nada
+    // main = nombre especial que reconoce la JVM
+    // String[] args = los argumentos que se pasan al ejecutar desde terminal
+    public static void main(String[] args) {
+
+        // System.out.println imprime texto en la consola y salta de línea
+        System.out.println(&quot;¡Hola, mundo Java!&quot;);
+
+        // System.out.print hace lo mismo pero SIN saltar de línea
+        System.out.print(&quot;Esto &quot;);
+        System.out.print(&quot;queda junto&quot;);
+
+        // System.out.println() sin argumento solo imprime un salto de línea
+        System.out.println();
+
+        // System.out.printf permite formatear la salida (como en C)
+        System.out.printf(&quot;Tengo %d años y me llamo %s%n&quot;, 25, &quot;Ana&quot;);
+    }
+}
+</code></pre>
+
+<p>Para compilar y ejecutar desde la terminal:</p>
+<pre class="codehilite"><code class="language-bash">javac HolaMundo.java   # Genera HolaMundo.class
+java HolaMundo         # Ejecuta (sin la extensión .class)
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.1:</strong>
+Crea un programa que imprima tu nombre, tu edad y tu objetivo con Java, cada dato en una línea diferente. Compílalo y ejecútalo desde la terminal <strong>sin IDE</strong>. Experimenta con <code>println</code>, <code>print</code> y <code>printf</code>.</p>
+<hr />
+<h3 id="tema-12-variables-tipos-de-datos-y-operadores">Tema 1.2 — Variables, Tipos de Datos y Operadores</h3>
+<h4 id="que-es-una-variable">¿Qué es una variable?</h4>
+<p>Una variable es como una <strong>caja con nombre</strong> donde guardas información. Esa caja tiene un tipo (qué tipo de cosa guarda), un nombre (para referenciarte a ella), y un valor (lo que hay dentro).</p>
+<pre class="codehilite"><code>int edad = 25;
+ │    │     │
+ │    │     └── Valor inicial
+ │    └── Nombre de la variable
+ └── Tipo: esta caja solo puede guardar números enteros
+</code></pre>
+
+<h4 id="tipos-primitivos-los-8-tipos-basicos">Tipos primitivos — Los 8 tipos básicos</h4>
+<p>Java tiene 8 tipos de datos primitivos. Son los más básicos y eficientes porque viven directamente en la memoria (no son objetos).</p>
+<pre class="codehilite"><code class="language-java">public class TiposPrimitivos {
+    public static void main(String[] args) {
+
+        // ── ENTEROS (sin decimales) ──────────────────────────────────────
+
+        byte pequeño = 127;          // 8 bits. Rango: -128 a 127
+                                     // Útil para ahorrar memoria en arrays grandes
+
+        short mediano = 32767;       // 16 bits. Rango: -32,768 a 32,767
+                                     // Poco usado en la práctica
+
+        int normal = 2147483647;     // 32 bits. Rango: ~-2,100M a ~2,100M
+                                     // EL tipo entero por defecto. Úsalo siempre
+
+        long grande = 9999999999L;   // 64 bits. Rango: enormísimo
+                                     // Nota la L al final: indica que es long
+                                     // Úsalo cuando int se queda pequeño (IDs, timestamps)
+
+        // ── DECIMALES ───────────────────────────────────────────────────
+
+        float impreciso = 3.14f;     // 32 bits, ~7 dígitos de precisión
+                                     // Nota la f al final: indica que es float
+                                     // ¡CUIDADO! Puede perder precisión
+
+        double preciso = 3.14159265358979; // 64 bits, ~15 dígitos de precisión
+                                           // EL tipo decimal por defecto. Úsalo siempre
+
+        // ── OTROS ───────────────────────────────────────────────────────
+
+        char letra = 'A';            // Un único carácter Unicode (va entre comillas simples)
+        char numero = '5';           // '5' como carácter, no como número
+        char especial = '\n';        // Caracteres de escape: \n=nueva línea, \t=tabulación
+
+        boolean verdadero = true;    // Solo puede ser true o false
+        boolean falso = false;       // Fundamental para condiciones y bucles
+
+        // Imprimir todo
+        System.out.println(&quot;int: &quot; + normal);
+        System.out.println(&quot;double: &quot; + preciso);
+        System.out.println(&quot;char: &quot; + letra);
+        System.out.println(&quot;boolean: &quot; + verdadero);
+    }
+}
+</code></pre>
+
+<h4 id="string-el-tipo-especial-para-texto">String — El tipo "especial" para texto</h4>
+<p><code>String</code> no es un tipo primitivo, es una clase. Pero se usa tanto que parece primitivo.</p>
+<pre class="codehilite"><code class="language-java">// String va con mayúscula (es una clase, no un primitivo)
+String nombre = &quot;Juan&quot;;
+String apellido = &quot;García&quot;;
+
+// Concatenación con +
+String nombreCompleto = nombre + &quot; &quot; + apellido; // &quot;Juan García&quot;
+
+// Métodos útiles de String
+System.out.println(nombre.length());           // 4 (número de caracteres)
+System.out.println(nombre.toUpperCase());      // &quot;JUAN&quot;
+System.out.println(nombre.toLowerCase());      // &quot;juan&quot;
+System.out.println(nombre.charAt(0));          // 'J' (carácter en posición 0)
+System.out.println(nombre.contains(&quot;ua&quot;));     // true
+System.out.println(nombre.replace(&quot;J&quot;, &quot;K&quot;)); // &quot;Kuan&quot;
+System.out.println(&quot;  hola  &quot;.trim());         // &quot;hola&quot; (elimina espacios extremos)
+System.out.println(nombre.equals(&quot;Juan&quot;));     // true (comparar strings SIEMPRE con equals)
+System.out.println(nombre.isEmpty());          // false
+System.out.println(&quot;&quot;.isEmpty());              // true
+
+// ⚠️ TRAMPA CLÁSICA: nunca compares Strings con ==
+String a = &quot;hola&quot;;
+String b = &quot;hola&quot;;
+System.out.println(a == b);      // Puede ser true o false (compara referencias)
+System.out.println(a.equals(b)); // Siempre true (compara contenido) ← USA ESTO
+</code></pre>
+
+<h4 id="casting-convertir-entre-tipos">Casting — Convertir entre tipos</h4>
+<pre class="codehilite"><code class="language-java">// Casting implícito (automático) — de &quot;pequeño&quot; a &quot;grande&quot;, sin pérdida
+int entero = 42;
+long largo = entero;        // int → long: automático, sin problema
+double decimal = entero;    // int → double: automático, 42 → 42.0
+
+// Casting explícito (manual) — de &quot;grande&quot; a &quot;pequeño&quot;, con posible pérdida
+double pi = 3.14159;
+int piEntero = (int) pi;    // double → int: pierdes los decimales → 3
+System.out.println(piEntero); // 3 (no redondea, simplemente trunca)
+
+long millon = 1000000L;
+int convertido = (int) millon; // Puede perder datos si es muy grande
+</code></pre>
+
+<h4 id="operadores">Operadores</h4>
+<pre class="codehilite"><code class="language-java">// ── ARITMÉTICOS ─────────────────────────────────────────────────────────
+int a = 10, b = 3;
+System.out.println(a + b);  // 13 — suma
+System.out.println(a - b);  // 7  — resta
+System.out.println(a * b);  // 30 — multiplicación
+System.out.println(a / b);  // 3  — división ENTERA (¡no 3.33!)
+System.out.println(a % b);  // 1  — módulo (resto de la división)
+
+// Para división decimal, al menos uno debe ser double:
+System.out.println(10.0 / 3);   // 3.3333...
+System.out.println((double) a / b); // 3.3333... (casting)
+
+// Incremento y decremento
+int x = 5;
+x++;         // x ahora es 6 (equivale a x = x + 1)
+x--;         // x ahora es 5
+++x;         // x ahora es 6 (pre-incremento: incrementa ANTES de usar el valor)
+int y = x++; // y = 6, x = 7 (post-incremento: usa el valor ANTES de incrementar)
+
+// ── RELACIONALES (devuelven boolean) ─────────────────────────────────────
+System.out.println(5 &gt; 3);   // true
+System.out.println(5 &lt; 3);   // false
+System.out.println(5 &gt;= 5);  // true
+System.out.println(5 &lt;= 4);  // false
+System.out.println(5 == 5);  // true  (igual)
+System.out.println(5 != 3);  // true  (diferente)
+
+// ── LÓGICOS ─────────────────────────────────────────────────────────────
+boolean sol = true;
+boolean lluvia = false;
+System.out.println(sol &amp;&amp; lluvia); // false — AND: ambos deben ser true
+System.out.println(sol || lluvia); // true  — OR: al menos uno debe ser true
+System.out.println(!sol);          // false — NOT: invierte el valor
+
+// Cortocircuito: Java no evalúa la segunda condición si con la primera ya sabe el resultado
+// Si la primera parte de &amp;&amp; es false, no evalúa la segunda (¡útil para evitar errores!)
+String texto = null;
+if (texto != null &amp;&amp; texto.length() &gt; 0) { // Si texto fuera null, texto.length() daría error
+    System.out.println(&quot;Texto válido&quot;);     // Pero &amp;&amp; cortocircuita y no llega a length()
+}
+
+// ── TERNARIO ─────────────────────────────────────────────────────────────
+// condición ? valor_si_true : valor_si_false
+int edad = 20;
+String resultado = (edad &gt;= 18) ? &quot;Mayor de edad&quot; : &quot;Menor de edad&quot;;
+System.out.println(resultado); // &quot;Mayor de edad&quot;
+
+// ── ASIGNACIÓN COMPUESTA ─────────────────────────────────────────────────
+int n = 10;
+n += 5;  // n = n + 5  → 15
+n -= 3;  // n = n - 3  → 12
+n *= 2;  // n = n * 2  → 24
+n /= 4;  // n = n / 4  → 6
+n %= 4;  // n = n % 4  → 2
+</code></pre>
+
+<h4 id="var-inferencia-de-tipos-java-10"><code>var</code> — Inferencia de tipos (Java 10+)</h4>
+<pre class="codehilite"><code class="language-java">// En lugar de escribir el tipo explícitamente, Java lo infiere del valor
+var nombre = &quot;Ana&quot;;        // Java infiere: String
+var edad = 25;             // Java infiere: int
+var precio = 9.99;         // Java infiere: double
+var activo = true;         // Java infiere: boolean
+
+// ⚠️ var solo funciona en variables locales (dentro de métodos), no en atributos de clase
+// ⚠️ var no significa &quot;sin tipo&quot;: el tipo se fija en la declaración y no puede cambiar
+// var x = 5; x = &quot;hola&quot;; ← ERROR de compilación
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.2:</strong>
+Escribe un programa que calcule el área y perímetro de un rectángulo dado su base (8.5) y altura (4.2). Muestra los resultados con dos decimales usando <code>printf</code>. También calcula cuántos rectángulos enteros caben en un espacio de 100 unidades cuadradas (usa división entera).</p>
+<hr />
+<h3 id="tema-13-control-de-flujo-condicionales">Tema 1.3 — Control de Flujo: Condicionales</h3>
+<h4 id="por-que-necesitamos-condicionales">¿Por qué necesitamos condicionales?</h4>
+<p>Un programa que siempre hace lo mismo es inútil. Los condicionales permiten que el programa <strong>tome decisiones</strong> según los datos. "Si el usuario tiene 18 años o más, déjale entrar; si no, muéstrale un error."</p>
+<h4 id="if-else-if-else"><code>if</code> / <code>else if</code> / <code>else</code></h4>
+<p>La estructura más básica de decisión. Funciona exactamente como en español:</p>
+<pre class="codehilite"><code class="language-java">public class Condicionales {
+    public static void main(String[] args) {
+
+        int nota = 75;
+
+        // if simple: solo ejecuta el bloque si la condición es true
+        if (nota &gt;= 50) {
+            System.out.println(&quot;Aprobado&quot;);
+        }
+
+        // if-else: una cosa U otra
+        if (nota &gt;= 50) {
+            System.out.println(&quot;Aprobado&quot;);
+        } else {
+            System.out.println(&quot;Suspendido&quot;);
+        }
+
+        // if - else if - else: múltiples ramas
+        // Java evalúa de arriba a abajo y ejecuta el PRIMER bloque cuya condición sea true
+        // El else al final es el &quot;por defecto&quot; si ninguna condición se cumple
+        if (nota &gt;= 90) {
+            System.out.println(&quot;Sobresaliente&quot;);
+        } else if (nota &gt;= 70) {
+            System.out.println(&quot;Notable&quot;);          // ← Este se ejecuta (75 &gt;= 70)
+        } else if (nota &gt;= 60) {
+            System.out.println(&quot;Bien&quot;);
+        } else if (nota &gt;= 50) {
+            System.out.println(&quot;Suficiente&quot;);
+        } else {
+            System.out.println(&quot;Suspenso&quot;);
+        }
+
+        // ⚠️ Si el bloque solo tiene UNA instrucción, las llaves son opcionales
+        // Pero es una MALA práctica omitirlas (causa bugs difíciles de detectar)
+        if (nota &gt;= 50)
+            System.out.println(&quot;Aprobado&quot;); // ← Funciona, pero no hagas esto
+    }
+}
+</code></pre>
+
+<h4 id="condiciones-compuestas">Condiciones compuestas</h4>
+<pre class="codehilite"><code class="language-java">int edad = 22;
+boolean tieneDNI = true;
+double saldo = 150.0;
+
+// AND (&amp;&amp;): TODAS las condiciones deben ser true
+if (edad &gt;= 18 &amp;&amp; tieneDNI &amp;&amp; saldo &gt; 100) {
+    System.out.println(&quot;Puede realizar la operación&quot;);
+}
+
+// OR (||): al menos UNA condición debe ser true
+if (edad &lt; 18 || !tieneDNI) {
+    System.out.println(&quot;No puede realizar la operación&quot;);
+}
+
+// Condiciones anidadas
+if (edad &gt;= 18) {
+    if (tieneDNI) {
+        System.out.println(&quot;Mayor de edad con DNI&quot;);
+    } else {
+        System.out.println(&quot;Mayor de edad sin DNI&quot;);
+    }
+}
+</code></pre>
+
+<h4 id="switch-multiples-casos-sobre-el-mismo-valor"><code>switch</code> — Múltiples casos sobre el mismo valor</h4>
+<p>Cuando tienes muchos <code>else if</code> comparando la misma variable contra valores fijos, <code>switch</code> es más limpio:</p>
+<pre class="codehilite"><code class="language-java">int diaSemana = 3; // 1=Lunes, 2=Martes, ..., 7=Domingo
+
+// switch CLÁSICO (funciona en todas las versiones de Java)
+switch (diaSemana) {
+    case 1:
+        System.out.println(&quot;Lunes&quot;);
+        break; // ⚠️ CRÍTICO: sin break, cae al siguiente case (fall-through)
+    case 2:
+        System.out.println(&quot;Martes&quot;);
+        break;
+    case 3:
+        System.out.println(&quot;Miércoles&quot;);
+        break;
+    case 6:
+    case 7:
+        System.out.println(&quot;Fin de semana&quot;); // Múltiples cases, mismo bloque
+        break;
+    default:
+        System.out.println(&quot;Día válido&quot;);    // Como el else: si nada coincide
+}
+
+// switch EXPRESSION (Java 14+) — Mucho más limpio y seguro
+// No necesita break, no hay fall-through accidental
+String nombreDia = switch (diaSemana) {
+    case 1 -&gt; &quot;Lunes&quot;;
+    case 2 -&gt; &quot;Martes&quot;;
+    case 3 -&gt; &quot;Miércoles&quot;;    // ← Este se ejecuta
+    case 4 -&gt; &quot;Jueves&quot;;
+    case 5 -&gt; &quot;Viernes&quot;;
+    case 6, 7 -&gt; &quot;Fin de semana&quot;; // Múltiples casos con coma
+    default -&gt; &quot;Día inválido&quot;;
+};
+System.out.println(nombreDia); // &quot;Miércoles&quot;
+
+// switch expression con bloques (cuando necesitas más de una línea)
+int resultado = switch (diaSemana) {
+    case 1, 2, 3, 4, 5 -&gt; {
+        System.out.println(&quot;Es un día laboral&quot;);
+        yield diaSemana * 8; // 'yield' devuelve el valor en bloques
+    }
+    default -&gt; 0;
+};
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.3:</strong>
+Crea un programa que lea una temperatura (hardcodeada) en Celsius y la clasifique como: <code>Muy frío (&lt;0)</code>, <code>Frío (0-15)</code>, <code>Agradable (16-25)</code>, <code>Caluroso (26-35)</code>, <code>Extremo (&gt;35)</code>. Luego, usando <code>switch expression</code>, muestra qué ropa recomiendas para ese rango de temperatura.</p>
+<hr />
+<h3 id="tema-14-control-de-flujo-bucles">Tema 1.4 — Control de Flujo: Bucles</h3>
+<h4 id="para-que-sirven-los-bucles">¿Para qué sirven los bucles?</h4>
+<p>Sin bucles, si quisieras imprimir los números del 1 al 100, tendrías que escribir 100 líneas de código. Los bucles permiten <strong>repetir un bloque de código</strong> mientras se cumpla una condición, o un número determinado de veces.</p>
+<p>Hay tres tipos principales, y cada uno tiene su caso de uso ideal:</p>
+<hr />
+<h4 id="el-bucle-for-cuando-sabes-cuantas-veces-quieres-repetir">El bucle <code>for</code> — Cuando sabes cuántas veces quieres repetir</h4>
+<p>El <code>for</code> es perfecto cuando <strong>conoces de antemano</strong> cuántas iteraciones necesitas.</p>
+<pre class="codehilite"><code class="language-java">// Anatomía del for:
+// for (inicialización; condición; actualización) { ... }
+//       │               │          │
+//       │               │          └── Se ejecuta AL FINAL de cada iteración
+//       │               └── Se comprueba ANTES de cada iteración
+//       └── Se ejecuta UNA SOLA VEZ al principio
+
+for (int i = 0; i &lt; 5; i++) {
+    System.out.println(&quot;Iteración número: &quot; + i);
+}
+// Salida:
+// Iteración número: 0
+// Iteración número: 1
+// Iteración número: 2
+// Iteración número: 3
+// Iteración número: 4
+
+// ¿Cómo funciona paso a paso?
+// 1. int i = 0  → Se crea la variable i con valor 0 (solo una vez)
+// 2. i &lt; 5      → ¿0 &lt; 5? SÍ → ejecuta el bloque
+// 3. i++        → i pasa a ser 1
+// 4. i &lt; 5      → ¿1 &lt; 5? SÍ → ejecuta el bloque
+// 5. i++        → i pasa a ser 2
+// ... (continúa hasta que i &lt; 5 sea false)
+// 6. i &lt; 5      → ¿5 &lt; 5? NO → el bucle termina
+
+// Contar hacia atrás
+for (int i = 10; i &gt;= 1; i--) {
+    System.out.print(i + &quot; &quot;);
+}
+System.out.println(); // &quot;10 9 8 7 6 5 4 3 2 1&quot;
+
+// Contar de 2 en 2
+for (int i = 0; i &lt;= 20; i += 2) {
+    System.out.print(i + &quot; &quot;); // &quot;0 2 4 6 8 10 12 14 16 18 20&quot;
+}
+
+// Bucles for anidados (uno dentro de otro)
+// El bucle interno se ejecuta COMPLETO por cada iteración del externo
+for (int fila = 1; fila &lt;= 3; fila++) {
+    for (int columna = 1; columna &lt;= 3; columna++) {
+        System.out.print(fila + &quot;x&quot; + columna + &quot;=&quot; + (fila*columna) + &quot;  &quot;);
+    }
+    System.out.println(); // Saltar de línea al terminar cada fila
+}
+// Salida:
+// 1x1=1  1x2=2  1x3=3
+// 2x1=2  2x2=4  2x3=6
+// 3x1=3  3x2=6  3x3=9
+</code></pre>
+
+<hr />
+<h4 id="el-bucle-while-cuando-no-sabes-cuantas-veces-repetir">El bucle <code>while</code> — Cuando no sabes cuántas veces repetir</h4>
+<p>El <code>while</code> es ideal cuando la repetición depende de una condición que puede cambiar de formas impredecibles.</p>
+<pre class="codehilite"><code class="language-java">// Anatomía:
+// while (condición) { bloque }
+// La condición se comprueba ANTES de cada iteración
+
+int numero = 1;
+while (numero &lt;= 5) {
+    System.out.println(&quot;Número: &quot; + numero);
+    numero++; // ⚠️ CRÍTICO: si olvidas actualizar la variable, bucle infinito
+}
+
+// Ejemplo más realista: dividir por 2 hasta llegar a 1
+int valor = 100;
+int pasos = 0;
+while (valor &gt; 1) {
+    valor = valor / 2;
+    pasos++;
+    System.out.println(&quot;Paso &quot; + pasos + &quot;: valor = &quot; + valor);
+}
+// No sabemos de antemano cuántos pasos tomará → while es perfecto aquí
+
+// Simulando lectura de usuario (en un programa real usarías Scanner)
+int intentos = 0;
+int contrasenaCorrecta = 1234;
+int intento = 0000; // Simulamos que el usuario introduce esto
+
+while (intento != contrasenaCorrecta &amp;&amp; intentos &lt; 3) {
+    intentos++;
+    System.out.println(&quot;Intento &quot; + intentos + &quot; incorrecto&quot;);
+    intento = 1234; // Simulamos que al tercer intento acierta
+}
+if (intento == contrasenaCorrecta) {
+    System.out.println(&quot;¡Acceso concedido!&quot;);
+} else {
+    System.out.println(&quot;Cuenta bloqueada&quot;);
+}
+</code></pre>
+
+<hr />
+<h4 id="el-bucle-do-while-ejecutar-al-menos-una-vez">El bucle <code>do-while</code> — Ejecutar al menos una vez</h4>
+<p>La diferencia con <code>while</code>: en <code>do-while</code>, el bloque se ejecuta <strong>primero</strong>, y LUEGO se comprueba la condición. Garantiza al menos una ejecución.</p>
+<pre class="codehilite"><code class="language-java">// Anatomía:
+// do { bloque } while (condición);
+
+int contador = 0;
+do {
+    System.out.println(&quot;Contador: &quot; + contador);
+    contador++;
+} while (contador &lt; 3);
+// Salida: 0, 1, 2
+
+// ¿Cuándo usar do-while? Cuando la primera ejecución siempre debe ocurrir
+// Ejemplo típico: menú de aplicación que se muestra al menos una vez
+int opcion;
+do {
+    System.out.println(&quot;=== MENÚ ===&quot;);
+    System.out.println(&quot;1. Nueva partida&quot;);
+    System.out.println(&quot;2. Cargar partida&quot;);
+    System.out.println(&quot;3. Salir&quot;);
+    opcion = 3; // Simulamos que el usuario elige 3 (salir)
+} while (opcion != 3); // Si elige 3, el bucle termina
+System.out.println(&quot;¡Hasta luego!&quot;);
+</code></pre>
+
+<hr />
+<h4 id="el-bucle-for-each-recorrer-colecciones-de-forma-elegante">El bucle <code>for-each</code> — Recorrer colecciones de forma elegante</h4>
+<p>Cuando quieres recorrer TODOS los elementos de un array o colección, el <code>for-each</code> es la forma más limpia:</p>
+<pre class="codehilite"><code class="language-java">String[] frutas = {&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;, &quot;kiwi&quot;};
+
+// for clásico (funciona pero es más verboso)
+for (int i = 0; i &lt; frutas.length; i++) {
+    System.out.println(frutas[i]);
+}
+
+// for-each (más limpio cuando no necesitas el índice)
+// &quot;Para cada String llamado 'fruta' EN el array 'frutas'&quot;
+for (String fruta : frutas) {
+    System.out.println(fruta);
+}
+
+// ⚠️ Limitación del for-each:
+// - No tienes acceso al índice (posición)
+// - No puedes modificar el array desde el propio bucle
+// - Solo va hacia adelante
+// Si necesitas cualquiera de esas cosas, usa el for clásico
+</code></pre>
+
+<hr />
+<h4 id="break-y-continue-controlar-el-flujo-dentro-del-bucle"><code>break</code> y <code>continue</code> — Controlar el flujo dentro del bucle</h4>
+<pre class="codehilite"><code class="language-java">// break: SALE del bucle completamente
+System.out.println(&quot;--- Ejemplo break ---&quot;);
+for (int i = 0; i &lt; 10; i++) {
+    if (i == 5) {
+        System.out.println(&quot;¡Encontré el 5! Saliendo del bucle.&quot;);
+        break; // El bucle termina aquí, aunque i &lt; 10 siga siendo true
+    }
+    System.out.println(&quot;i = &quot; + i);
+}
+// Imprime 0, 1, 2, 3, 4 y luego el mensaje
+
+// continue: SALTA esta iteración y pasa a la siguiente
+System.out.println(&quot;--- Ejemplo continue ---&quot;);
+for (int i = 0; i &lt; 10; i++) {
+    if (i % 2 == 0) {
+        continue; // Si i es par, salta el println y va al siguiente i
+    }
+    System.out.println(&quot;Número impar: &quot; + i);
+}
+// Imprime solo 1, 3, 5, 7, 9
+
+// Etiquetas (labels) — break/continue en bucles anidados
+// Normalmente break solo sale del bucle más interno
+// Con etiquetas puedes salir del bucle que quieras
+externo: // Esta es la etiqueta del bucle externo
+for (int i = 0; i &lt; 5; i++) {
+    for (int j = 0; j &lt; 5; j++) {
+        if (i == 2 &amp;&amp; j == 3) {
+            System.out.println(&quot;¡Encontrado en [&quot; + i + &quot;][&quot; + j + &quot;]!&quot;);
+            break externo; // Sale del bucle EXTERNO (no solo del interno)
+        }
+    }
+}
+// Sin 'externo', break solo saldría del bucle j, no del i
+</code></pre>
+
+<hr />
+<h4 id="complejidad-de-bucles-anidados-por-que-importa">Complejidad de bucles anidados — Por qué importa</h4>
+<pre class="codehilite"><code class="language-java">int n = 1000;
+
+// Un solo bucle: n operaciones = 1.000 operaciones
+for (int i = 0; i &lt; n; i++) {
+    // Este código se ejecuta 1.000 veces
+}
+
+// Dos bucles anidados: n² operaciones = 1.000.000 operaciones
+for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+        // Este código se ejecuta 1.000 x 1.000 = 1.000.000 veces
+    }
+}
+
+// Tres bucles anidados: n³ = 1.000.000.000 operaciones (¡un segundo de CPU!)
+// Esto se convierte en un problema de rendimiento muy rápidamente
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.4:</strong></p>
+<p>Parte A: Imprime la tabla de multiplicar del 1 al 10 formateada como una cuadrícula usando bucles anidados. La salida debe verse así:</p>
+<pre class="codehilite"><code>    1    2    3   ...   10
+    2    4    6   ...   20
+    ...
+   10   20   30  ...  100
+</code></pre>
+
+<p>Parte B: Usando un bucle <code>for</code> y <code>break</code>, determina si el número 97 es primo (un primo solo es divisible por 1 y por sí mismo). Muestra los divisores que encuentres.</p>
+<p>Parte C: Usando <code>continue</code>, imprime todos los números del 1 al 50 que NO sean divisibles ni por 3 ni por 7.</p>
+<hr />
+<h3 id="tema-15-arrays">Tema 1.5 — Arrays</h3>
+<h4 id="que-es-un-array">¿Qué es un array?</h4>
+<p>Un array es una <strong>secuencia de elementos del mismo tipo</strong> guardados en posiciones contiguas de memoria. Piensa en él como una fila de casillas numeradas:</p>
+<pre class="codehilite"><code>Posición:  [0]   [1]   [2]   [3]   [4]
+Valor:      5     3     8     1     9
+</code></pre>
+
+<p>Clave fundamental: <strong>los índices empiezan en 0</strong>, no en 1. Un array de 5 elementos tiene posiciones del 0 al 4.</p>
+<pre class="codehilite"><code class="language-java">public class Arrays {
+    public static void main(String[] args) {
+
+        // ── DECLARACIÓN E INICIALIZACIÓN ─────────────────────────────────
+
+        // Forma 1: declarar y luego inicializar
+        int[] numeros;           // Declaración: &quot;numeros será un array de int&quot;
+        numeros = new int[5];    // Creación: array de 5 enteros (todos valen 0 por defecto)
+
+        // Forma 2: declarar y crear en una línea
+        int[] edades = new int[10]; // 10 enteros, todos a 0
+
+        // Forma 3: declarar e inicializar con valores directamente
+        int[] primos = {2, 3, 5, 7, 11, 13};
+        String[] dias = {&quot;Lunes&quot;, &quot;Martes&quot;, &quot;Miércoles&quot;, &quot;Jueves&quot;, &quot;Viernes&quot;};
+
+        // ── ACCESO A ELEMENTOS ───────────────────────────────────────────
+
+        System.out.println(primos[0]); // 2 — primer elemento
+        System.out.println(primos[5]); // 13 — último elemento (índice = longitud - 1)
+        // primos[6] → ¡ERROR! ArrayIndexOutOfBoundsException — índice fuera de rango
+
+        // Modificar un elemento
+        primos[0] = 99;
+        System.out.println(primos[0]); // 99
+
+        // Longitud del array
+        System.out.println(primos.length); // 6 (no es método, es atributo: sin paréntesis)
+
+        // Último elemento: siempre en posición length - 1
+        System.out.println(primos[primos.length - 1]); // 13
+
+        // ── RECORRER UN ARRAY ────────────────────────────────────────────
+
+        int[] valores = {10, 20, 30, 40, 50};
+
+        // Con for clásico (cuando necesitas el índice)
+        for (int i = 0; i &lt; valores.length; i++) {
+            System.out.println(&quot;Posición &quot; + i + &quot;: &quot; + valores[i]);
+        }
+
+        // Con for-each (cuando solo necesitas el valor)
+        for (int v : valores) {
+            System.out.print(v + &quot; &quot;);
+        }
+
+        // ── OPERACIONES ÚTILES ───────────────────────────────────────────
+
+        // Calcular suma y promedio
+        int suma = 0;
+        for (int v : valores) {
+            suma += v;
+        }
+        double promedio = (double) suma / valores.length;
+        System.out.println(&quot;Suma: &quot; + suma + &quot;, Promedio: &quot; + promedio);
+
+        // Encontrar el máximo
+        int maximo = valores[0]; // Empezamos asumiendo que el primero es el mayor
+        for (int v : valores) {
+            if (v &gt; maximo) {
+                maximo = v;
+            }
+        }
+        System.out.println(&quot;Máximo: &quot; + maximo);
+
+        // ── CLASE java.util.Arrays ──────────────────────────────────────
+        // (necesitas: import java.util.Arrays; al inicio del archivo)
+
+        int[] desordenado = {5, 2, 8, 1, 9, 3};
+
+        java.util.Arrays.sort(desordenado);           // Ordena el array (modifica el original)
+        System.out.println(java.util.Arrays.toString(desordenado)); // [1, 2, 3, 5, 8, 9]
+
+        int[] copia = java.util.Arrays.copyOf(desordenado, 4);  // Copia los primeros 4 elementos
+        System.out.println(java.util.Arrays.toString(copia));   // [1, 2, 3, 5]
+
+        java.util.Arrays.fill(copia, 0); // Rellena todo con 0
+        System.out.println(java.util.Arrays.toString(copia)); // [0, 0, 0, 0]
+
+        // ── ARRAYS MULTIDIMENSIONALES (MATRICES) ─────────────────────────
+
+        // Una matriz es un &quot;array de arrays&quot;
+        int[][] matriz = {
+            {1, 2, 3},   // Fila 0
+            {4, 5, 6},   // Fila 1
+            {7, 8, 9}    // Fila 2
+        };
+
+        System.out.println(matriz[0][0]); // 1 — fila 0, columna 0
+        System.out.println(matriz[1][2]); // 6 — fila 1, columna 2
+        System.out.println(matriz[2][2]); // 9 — fila 2, columna 2
+
+        // Recorrer una matriz
+        for (int fila = 0; fila &lt; matriz.length; fila++) {
+            for (int col = 0; col &lt; matriz[fila].length; col++) {
+                System.out.printf(&quot;%3d&quot;, matriz[fila][col]);
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.5:</strong>
+Sin usar <code>Arrays.sort()</code>, implementa el algoritmo <strong>Bubble Sort</strong> manualmente sobre este array: <code>{64, 34, 25, 12, 22, 11, 90}</code>. El Bubble Sort compara pares adyacentes y los intercambia si están en el orden incorrecto, repitiendo hasta que el array esté ordenado. Muestra el array después de cada "pasada" completa para ver el progreso.</p>
+<hr />
+<h3 id="tema-16-metodos-funciones">Tema 1.6 — Métodos (Funciones)</h3>
+<h4 id="que-es-un-metodo-y-por-que-existen">¿Qué es un método y por qué existen?</h4>
+<p>Un método es un <strong>bloque de código con nombre</strong> que realiza una tarea específica. Sin métodos, si necesitas calcular el área de un círculo en 10 lugares distintos de tu programa, copiarías la fórmula 10 veces. Con métodos, la escribes una vez y la llamas 10 veces.</p>
+<p>Beneficios: <strong>reutilización</strong>, <strong>legibilidad</strong> y <strong>mantenibilidad</strong> (si cambia la fórmula, solo la cambias en un lugar).</p>
+<pre class="codehilite"><code class="language-java">public class Metodos {
+
+    // ── ANATOMÍA DE UN MÉTODO ────────────────────────────────────────────
+    //
+    // [modificadores] [tipo_retorno] [nombre]([parámetros]) { [cuerpo] }
+    //
+    //   public static     double       calcularArea  (double radio)
+    //       │               │               │              │
+    //       │               │               │              └── Parámetros (entrada)
+    //       │               │               └── Nombre descriptivo (verbo + sustantivo)
+    //       │               └── Tipo de dato que DEVUELVE (double, int, String, void...)
+    //       └── Modificadores (public=accesible, static=sin necesitar objeto)
+
+    // Método que recibe un parámetro y devuelve un valor
+    public static double calcularAreaCirculo(double radio) {
+        double area = Math.PI * radio * radio; // Math.PI ≈ 3.14159...
+        return area; // 'return' envía el resultado de vuelta a quien llamó el método
+    }
+
+    // Método void: no devuelve nada, solo hace una acción
+    public static void imprimirLinea(String mensaje) {
+        System.out.println(&quot;&gt;&gt;&gt; &quot; + mensaje + &quot; &lt;&lt;&lt;&quot;);
+        // No hay return (o puedes escribir 'return;' vacío para salir antes)
+    }
+
+    // Método con múltiples parámetros
+    public static double calcularIMC(double peso, double altura) {
+        return peso / (altura * altura);
+    }
+
+    // Método que devuelve un String
+    public static String clasificarIMC(double imc) {
+        if (imc &lt; 18.5) return &quot;Bajo peso&quot;;
+        else if (imc &lt; 25.0) return &quot;Normal&quot;;
+        else if (imc &lt; 30.0) return &quot;Sobrepeso&quot;;
+        else return &quot;Obesidad&quot;;
+    }
+
+    public static void main(String[] args) {
+
+        // ── LLAMAR A UN MÉTODO ───────────────────────────────────────────
+
+        // Llamar y guardar el resultado en una variable
+        double area = calcularAreaCirculo(5.0);
+        System.out.println(&quot;Área: &quot; + area); // 78.53981633974483
+
+        // Llamar directamente dentro de otra expresión
+        System.out.println(&quot;Área de radio 3: &quot; + calcularAreaCirculo(3.0));
+
+        // Llamar un método void
+        imprimirLinea(&quot;Hola desde un método&quot;);
+
+        // Encadenar resultados
+        double peso = 70.0;
+        double altura = 1.75;
+        double imc = calcularIMC(peso, altura);
+        String clasificacion = clasificarIMC(imc);
+        System.out.printf(&quot;IMC: %.2f → %s%n&quot;, imc, clasificacion);
+    }
+}
+</code></pre>
+
+<h4 id="paso-por-valor-vs-paso-por-referencia">Paso por valor vs paso por referencia</h4>
+<p>Este es uno de los conceptos más importantes y malentendidos de Java:</p>
+<pre class="codehilite"><code class="language-java">public class PasoPorValor {
+
+    public static void intentarCambiarEntero(int numero) {
+        numero = 999; // Solo cambia la COPIA local
+    }
+
+    public static void cambiarArray(int[] arr) {
+        arr[0] = 999; // Cambia el array ORIGINAL (pasamos la referencia)
+    }
+
+    public static void main(String[] args) {
+
+        // PRIMITIVOS: se pasa una COPIA del valor
+        int x = 42;
+        intentarCambiarEntero(x);
+        System.out.println(x); // Sigue siendo 42 — el método recibió una copia
+
+        // OBJETOS Y ARRAYS: se pasa la REFERENCIA (la dirección de memoria)
+        int[] numeros = {1, 2, 3};
+        cambiarArray(numeros);
+        System.out.println(numeros[0]); // Ahora es 999 — el método modificó el original
+
+        // Analogía:
+        // Primitivo: te doy una FOTOCOPIA de mi documento. Puedes escribir en la copia,
+        //            pero el original sigue intacto.
+        // Objeto:    te doy la LLAVE de mi casa. Puedes entrar y cambiar cosas dentro.
+    }
+}
+</code></pre>
+
+<h4 id="sobrecarga-de-metodos-overloading">Sobrecarga de métodos (Overloading)</h4>
+<p>Puedes tener varios métodos con el <strong>mismo nombre</strong> pero <strong>diferente firma</strong> (diferente número o tipo de parámetros):</p>
+<pre class="codehilite"><code class="language-java">public class Sobrecarga {
+
+    // Tres versiones del mismo método, Java elige la correcta según los argumentos
+    public static double sumar(int a, int b) {
+        System.out.println(&quot;Sumando dos enteros&quot;);
+        return a + b;
+    }
+
+    public static double sumar(double a, double b) {
+        System.out.println(&quot;Sumando dos decimales&quot;);
+        return a + b;
+    }
+
+    public static double sumar(int a, int b, int c) {
+        System.out.println(&quot;Sumando tres enteros&quot;);
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        sumar(3, 4);        // → &quot;Sumando dos enteros&quot;
+        sumar(3.5, 4.2);    // → &quot;Sumando dos decimales&quot;
+        sumar(1, 2, 3);     // → &quot;Sumando tres enteros&quot;
+    }
+}
+</code></pre>
+
+<h4 id="recursividad-un-metodo-que-se-llama-a-si-mismo">Recursividad — Un método que se llama a sí mismo</h4>
+<p>La recursividad es una técnica donde un método <strong>se llama a sí mismo</strong> para resolver un problema más pequeño. Toda función recursiva necesita:
+1. <strong>Caso base</strong>: la condición de parada (sin esto, bucle infinito y StackOverflow)
+2. <strong>Caso recursivo</strong>: la llamada a sí mismo con un problema más pequeño</p>
+<pre class="codehilite"><code class="language-java">public class Recursividad {
+
+    // Factorial: n! = n × (n-1) × (n-2) × ... × 1
+    // factorial(5) = 5 × factorial(4)
+    //              = 5 × 4 × factorial(3)
+    //              = 5 × 4 × 3 × factorial(2)
+    //              = 5 × 4 × 3 × 2 × factorial(1)
+    //              = 5 × 4 × 3 × 2 × 1 = 120
+    public static long factorial(int n) {
+        // Caso base: si n es 0 o 1, el factorial es 1
+        if (n &lt;= 1) {
+            return 1;
+        }
+        // Caso recursivo: n × factorial del número anterior
+        return n * factorial(n - 1);
+    }
+
+    // Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+    // Cada número es la suma de los dos anteriores
+    public static int fibonacci(int n) {
+        if (n &lt;= 0) return 0; // Caso base 1
+        if (n == 1) return 1; // Caso base 2
+        return fibonacci(n - 1) + fibonacci(n - 2); // Caso recursivo
+    }
+
+    public static void main(String[] args) {
+        System.out.println(factorial(5));  // 120
+        System.out.println(factorial(10)); // 3628800
+
+        for (int i = 0; i &lt;= 10; i++) {
+            System.out.print(fibonacci(i) + &quot; &quot;);
+        }
+        // 0 1 1 2 3 5 8 13 21 34 55
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 1.6:</strong>
+Implementa una calculadora con métodos separados: <code>sumar</code>, <code>restar</code>, <code>multiplicar</code>, <code>dividir</code> (que devuelva un <code>String</code> con mensaje de error si el divisor es 0 en lugar de lanzar excepción). Añade:
+- Un método recursivo para calcular la <strong>potencia</strong> (<code>base^exponente</code>) sin usar <code>Math.pow()</code>
+- Un método que determine si un número es <strong>perfecto</strong> (un número perfecto es igual a la suma de sus divisores propios: 6 = 1+2+3)
+- Un método <code>esPalindromo(String texto)</code> que determine si una palabra se lee igual al revés</p>
+<hr />
+<hr />
+<h2 id="nivel-2-aprendiz-poo">🔵 NIVEL 2 — APRENDIZ (POO)</h2>
+<hr />
+<h3 id="tema-21-clases-y-objetos">Tema 2.1 — Clases y Objetos</h3>
+<h4 id="que-es-la-programacion-orientada-a-objetos">¿Qué es la Programación Orientada a Objetos?</h4>
+<p>La POO es una forma de organizar el código modelando el mundo real. En lugar de tener funciones sueltas que operan sobre datos sueltos, agrupas los <strong>datos</strong> (atributos) y las <strong>funciones</strong> que operan sobre esos datos (métodos) en una misma unidad llamada <strong>clase</strong>.</p>
+<ul>
+<li><strong>Clase</strong>: el molde, el plano, la plantilla. Define qué atributos y métodos tienen los objetos.</li>
+<li><strong>Objeto</strong>: una instancia concreta de una clase. El "objeto de verdad" creado a partir del molde.</li>
+</ul>
+<p>Analogía: La clase <code>Coche</code> es el plano de un coche. Los objetos son coches concretos: tu Toyota, el BMW de tu vecino. Todos comparten el mismo plano (mismos atributos: marca, color, velocidad) pero tienen valores distintos.</p>
+<pre class="codehilite"><code class="language-java">// ── DEFINICIÓN DE LA CLASE ───────────────────────────────────────────────
+
+public class Persona {
+
+    // ATRIBUTOS: los datos que &quot;sabe&quot; cada persona
+    // Son variables que pertenecen a la clase (campos o fields)
+    String nombre;    // Por defecto null
+    int edad;         // Por defecto 0
+    double altura;    // Por defecto 0.0
+
+    // CONSTRUCTOR: método especial que se ejecuta al crear un objeto con 'new'
+    // - Mismo nombre que la clase
+    // - Sin tipo de retorno (ni void)
+    // - Puede recibir parámetros para inicializar los atributos
+    public Persona(String nombre, int edad, double altura) {
+        // 'this' se refiere al objeto que se está creando
+        // Necesario cuando el parámetro tiene el mismo nombre que el atributo
+        this.nombre = nombre;
+        this.edad = edad;
+        this.altura = altura;
+    }
+
+    // Constructor sobrecargado (sin altura, con valor por defecto)
+    public Persona(String nombre, int edad) {
+        this(nombre, edad, 1.70); // Llama al otro constructor con altura por defecto
+    }
+
+    // MÉTODOS: las acciones que puede hacer una persona
+
+    // Método que no devuelve nada
+    public void saludar() {
+        // Dentro de un método, 'this.nombre' y 'nombre' son equivalentes
+        // (cuando no hay ambigüedad con parámetros)
+        System.out.println(&quot;Hola, soy &quot; + this.nombre + &quot; y tengo &quot; + this.edad + &quot; años.&quot;);
+    }
+
+    // Método que devuelve un valor calculado
+    public boolean esMayorDeEdad() {
+        return this.edad &gt;= 18;
+    }
+
+    // Método que recibe parámetros
+    public void cumplirAnios(int años) {
+        this.edad += años;
+        System.out.println(this.nombre + &quot; ahora tiene &quot; + this.edad + &quot; años.&quot;);
+    }
+
+    // toString(): método especial que Java usa cuando imprime un objeto
+    // Si no lo defines, imprime algo como &quot;Persona@1b6d3586&quot; (dirección de memoria)
+    @Override
+    public String toString() {
+        return &quot;Persona{nombre='&quot; + nombre + &quot;', edad=&quot; + edad + &quot;, altura=&quot; + altura + &quot;}&quot;;
+    }
+
+    // equals(): para comparar si dos objetos son &quot;iguales&quot;
+    // Sin esto, == compara referencias (si son el mismo objeto en memoria), no valores
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;               // Son exactamente el mismo objeto
+        if (obj == null) return false;               // El otro es null
+        if (!(obj instanceof Persona)) return false; // El otro no es una Persona
+        Persona otra = (Persona) obj;
+        return this.nombre.equals(otra.nombre) &amp;&amp; this.edad == otra.edad;
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+
+        // ── CREAR OBJETOS ────────────────────────────────────────────────
+
+        // 'new' crea un nuevo objeto usando el constructor
+        Persona ana = new Persona(&quot;Ana&quot;, 28, 1.65);
+        Persona pedro = new Persona(&quot;Pedro&quot;, 17); // Usa el constructor sin altura
+
+        // ── ACCEDER A ATRIBUTOS Y MÉTODOS ────────────────────────────────
+
+        System.out.println(ana.nombre);       // &quot;Ana&quot;
+        System.out.println(ana.edad);         // 28
+        ana.saludar();                        // &quot;Hola, soy Ana y tengo 28 años.&quot;
+        System.out.println(ana.esMayorDeEdad()); // true
+        pedro.cumplirAnios(1);                // &quot;Pedro ahora tiene 18 años.&quot;
+
+        // toString() se llama automáticamente al imprimir el objeto
+        System.out.println(ana);  // &quot;Persona{nombre='Ana', edad=28, altura=1.65}&quot;
+
+        // ── COMPARAR OBJETOS ─────────────────────────────────────────────
+
+        Persona ana2 = new Persona(&quot;Ana&quot;, 28, 1.65);
+
+        System.out.println(ana == ana2);       // false: son objetos distintos en memoria
+        System.out.println(ana.equals(ana2));  // true: tienen los mismos datos
+
+        // ── LOS OBJETOS SON REFERENCIAS ──────────────────────────────────
+
+        Persona referencia = ana; // referencia apunta AL MISMO objeto que ana
+        referencia.edad = 99;
+        System.out.println(ana.edad); // 99 — ¡ana también cambió! Son el mismo objeto
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 2.1:</strong>
+Modela una clase <code>CuentaBancaria</code> con atributos <code>titular</code> (String), <code>saldo</code> (double) y <code>numeroCuenta</code> (String). Implementa: constructor que inicialice los tres atributos, métodos <code>depositar(double cantidad)</code> y <code>retirar(double cantidad)</code> (imprime un mensaje de error si no hay saldo suficiente, sin lanzar excepción aún), <code>mostrarEstado()</code> que imprima todos los datos formateados, y <code>toString()</code>. Crea 3 instancias y realiza transferencias entre ellas (retirar de una y depositar en otra).</p>
+<hr />
+<h3 id="tema-22-encapsulamiento">Tema 2.2 — Encapsulamiento</h3>
+<h4 id="por-que-encapsular">¿Por qué encapsular?</h4>
+<p>En el ejemplo anterior, los atributos de <code>Persona</code> eran públicos. Eso significa que cualquiera puede hacer <code>ana.edad = -500</code>, poniendo la edad en un valor imposible. El <strong>encapsulamiento</strong> protege los datos internos del objeto y controla cómo se accede a ellos.</p>
+<p>Regla de oro: <strong>los atributos deben ser <code>private</code>, el acceso mediante métodos <code>public</code></strong>.</p>
+<pre class="codehilite"><code class="language-java">public class CuentaBancaria {
+
+    // ATRIBUTOS PRIVADOS: nadie fuera de esta clase puede accederlos directamente
+    private String titular;
+    private double saldo;
+    private String numeroCuenta;
+    private int intentosRetiroFallido; // Campo interno, nunca lo exponemos
+
+    public CuentaBancaria(String titular, String numeroCuenta, double saldoInicial) {
+        this.titular = titular;
+        this.numeroCuenta = numeroCuenta;
+        // Validamos en el constructor también
+        if (saldoInicial &lt; 0) throw new IllegalArgumentException(&quot;Saldo inicial no puede ser negativo&quot;);
+        this.saldo = saldoInicial;
+        this.intentosRetiroFallido = 0;
+    }
+
+    // ── GETTERS: métodos para LEER atributos privados ────────────────────
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public String getNumeroCuenta() {
+        // Podemos transformar el dato antes de devolverlo
+        return &quot;****&quot; + numeroCuenta.substring(numeroCuenta.length() - 4);
+    }
+
+    // ── SETTERS: métodos para MODIFICAR atributos privados ───────────────
+    // No todos los atributos necesitan setter. Si no quieres que se cambie, no lo hagas.
+
+    public void setTitular(String titular) {
+        // Validación: el setter controla qué valores son aceptables
+        if (titular == null || titular.isBlank()) {
+            System.out.println(&quot;Error: el titular no puede estar vacío&quot;);
+            return;
+        }
+        this.titular = titular;
+    }
+
+    // saldo NO tiene setter público: solo se modifica mediante depositar/retirar
+    // numeroCuenta NO tiene setter: una vez creada, no se cambia
+
+    // ── MÉTODOS DE NEGOCIO ───────────────────────────────────────────────
+
+    public void depositar(double cantidad) {
+        if (cantidad &lt;= 0) {
+            System.out.println(&quot;Error: la cantidad a depositar debe ser positiva&quot;);
+            return;
+        }
+        saldo += cantidad;
+        System.out.printf(&quot;Depósito de %.2f€. Nuevo saldo: %.2f€%n&quot;, cantidad, saldo);
+    }
+
+    public boolean retirar(double cantidad) {
+        if (cantidad &lt;= 0) {
+            System.out.println(&quot;Error: la cantidad a retirar debe ser positiva&quot;);
+            return false;
+        }
+        if (cantidad &gt; saldo) {
+            intentosRetiroFallido++;
+            System.out.printf(&quot;Error: saldo insuficiente (saldo: %.2f€, intento: %.2f€)%n&quot;,
+                              saldo, cantidad);
+            return false;
+        }
+        saldo -= cantidad;
+        intentosRetiroFallido = 0;
+        System.out.printf(&quot;Retirado %.2f€. Nuevo saldo: %.2f€%n&quot;, cantidad, saldo);
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(&quot;Cuenta[%s | Titular: %s | Saldo: %.2f€]&quot;,
+                             getNumeroCuenta(), titular, saldo);
+    }
+}
+</code></pre>
+
+<h4 id="clases-inmutables-el-siguiente-nivel-del-encapsulamiento">Clases inmutables — El siguiente nivel del encapsulamiento</h4>
+<p>Una clase inmutable no puede ser modificada después de crearse. Sus ventajas son enormes: thread-safe, sin efectos secundarios, fácil de razonar. <code>String</code> en Java es inmutable.</p>
+<pre class="codehilite"><code class="language-java">// Clase inmutable: todos los campos son final y no hay setters
+public final class Punto { // 'final' evita que se pueda heredar de ella
+
+    private final double x; // 'final': solo se puede asignar una vez
+    private final double y;
+
+    public Punto(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getX() { return x; }
+    public double getY() { return y; }
+
+    // En vez de modificar, devolvemos un NUEVO objeto con el valor cambiado
+    public Punto moverX(double dx) {
+        return new Punto(this.x + dx, this.y); // Nuevo Punto, el original no cambia
+    }
+
+    public double distanciaA(Punto otro) {
+        double dx = this.x - otro.x;
+        double dy = this.y - otro.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    @Override
+    public String toString() {
+        return &quot;(&quot; + x + &quot;, &quot; + y + &quot;)&quot;;
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 2.2:</strong>
+Refactoriza la <code>CuentaBancaria</code> del ejercicio anterior para que sea completamente encapsulada (todos los campos <code>private</code>). Añade validaciones en setters y métodos. Luego crea una clase <code>Transferencia</code> con atributos <code>origen</code>, <code>destino</code> (ambos <code>CuentaBancaria</code>) y <code>cantidad</code>, y un método <code>ejecutar()</code> que realice la transferencia de forma segura.</p>
+<hr />
+<h3 id="tema-23-herencia">Tema 2.3 — Herencia</h3>
+<h4 id="que-es-la-herencia">¿Qué es la herencia?</h4>
+<p>La herencia permite crear una clase nueva basada en una clase existente, <strong>heredando</strong> todos sus atributos y métodos. La nueva clase puede añadir sus propios elementos o modificar los heredados.</p>
+<ul>
+<li><strong>Clase padre (superclase)</strong>: la clase original, más general.</li>
+<li><strong>Clase hija (subclase)</strong>: la clase nueva, más específica. Usa <code>extends</code>.</li>
+</ul>
+<pre class="codehilite"><code class="language-java">// ── CLASE PADRE ──────────────────────────────────────────────────────────
+
+public class Animal {
+    private String nombre;
+    private int edad;
+    private double peso;
+
+    public Animal(String nombre, int edad, double peso) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.peso = peso;
+    }
+
+    // Getters
+    public String getNombre() { return nombre; }
+    public int getEdad() { return edad; }
+    public double getPeso() { return peso; }
+
+    // Método que las subclases pueden sobreescribir
+    public void hacerSonido() {
+        System.out.println(nombre + &quot; hace un sonido genérico&quot;);
+    }
+
+    public void comer(String comida) {
+        System.out.println(nombre + &quot; está comiendo &quot; + comida);
+    }
+
+    @Override
+    public String toString() {
+        return String.format(&quot;%s(nombre=%s, edad=%d, peso=%.1fkg)&quot;,
+                             getClass().getSimpleName(), nombre, edad, peso);
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">// ── CLASE HIJA ───────────────────────────────────────────────────────────
+
+public class Perro extends Animal { // Hereda todo de Animal
+
+    // Atributo propio de Perro (no existe en Animal)
+    private String raza;
+    private boolean estaAdiestrado;
+
+    // El constructor de la hija DEBE llamar al constructor del padre
+    public Perro(String nombre, int edad, double peso, String raza) {
+        super(nombre, edad, peso); // 'super(...)' llama al constructor de Animal
+        // DEBE ser la primera instrucción del constructor
+        this.raza = raza;
+        this.estaAdiestrado = false;
+    }
+
+    public String getRaza() { return raza; }
+
+    public void adiestrar() {
+        estaAdiestrado = true;
+        System.out.println(getNombre() + &quot; ha sido adiestrado.&quot;);
+    }
+
+    // @Override: sobreescribimos el método del padre con comportamiento específico
+    // @Override es opcional pero MUY recomendable: el compilador verifica que
+    // realmente estás sobreescribiendo algo (evita errores de typo en el nombre)
+    @Override
+    public void hacerSonido() {
+        System.out.println(getNombre() + &quot; dice: ¡Guau guau!&quot;);
+    }
+
+    // Podemos llamar al método del padre con super.metodo()
+    public void presentarse() {
+        super.hacerSonido(); // Llama al hacerSonido() de Animal
+        hacerSonido();       // Llama al hacerSonido() de Perro
+        System.out.println(&quot;Soy un &quot; + raza + &quot; y &quot; +
+                           (estaAdiestrado ? &quot;estoy adiestrado&quot; : &quot;no estoy adiestrado&quot;));
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Gato extends Animal {
+    private boolean esInterior;
+
+    public Gato(String nombre, int edad, double peso, boolean esInterior) {
+        super(nombre, edad, peso);
+        this.esInterior = esInterior;
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println(getNombre() + &quot; dice: ¡Miau!&quot;);
+    }
+
+    public void ronronear() {
+        System.out.println(getNombre() + &quot; está ronroneando... purrrr&quot;);
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+
+        Perro rex = new Perro(&quot;Rex&quot;, 3, 25.5, &quot;Pastor Alemán&quot;);
+        Gato misu = new Gato(&quot;Misu&quot;, 5, 4.2, true);
+
+        // Los objetos tienen acceso a los métodos heredados
+        rex.comer(&quot;croquetas&quot;);    // Método de Animal
+        rex.hacerSonido();         // Método de Perro (sobreescrito)
+        rex.adiestrar();           // Método propio de Perro
+
+        misu.comer(&quot;atún&quot;);        // Método de Animal
+        misu.hacerSonido();        // Método de Gato (sobreescrito)
+        misu.ronronear();           // Método propio de Gato
+
+        System.out.println(rex);   // toString() de Animal, pero con &quot;Perro&quot; como clase
+
+        // instanceof: comprobar si un objeto es de un tipo determinado
+        System.out.println(rex instanceof Perro);  // true
+        System.out.println(rex instanceof Animal); // true (Perro ES UN Animal)
+        System.out.println(rex instanceof Gato);   // false
+
+        // POLIMORFISMO: una variable de tipo Animal puede apuntar a un Perro o Gato
+        Animal animal1 = new Perro(&quot;Buddy&quot;, 2, 15.0, &quot;Labrador&quot;);
+        Animal animal2 = new Gato(&quot;Luna&quot;, 3, 3.5, false);
+
+        animal1.hacerSonido(); // Llama al de Perro: &quot;Buddy dice: ¡Guau guau!&quot;
+        animal2.hacerSonido(); // Llama al de Gato: &quot;Luna dice: ¡Miau!&quot;
+        // Java decide en TIEMPO DE EJECUCIÓN qué método llamar (vinculación dinámica)
+
+        // Para usar métodos específicos de Perro, necesitas casting:
+        if (animal1 instanceof Perro perro) { // Pattern matching (Java 16+)
+            perro.adiestrar(); // Ahora puedes usar métodos de Perro
+        }
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 2.3:</strong>
+Crea la jerarquía: <code>Vehiculo</code> (atributos: marca, velocidadMaxima, año; métodos: <code>arrancar()</code>, <code>frenar()</code>, <code>describir()</code>) → <code>Coche</code> (atributos: numeroPuertas, tipoCombustible), <code>Moto</code> (atributos: tieneSidecar), <code>Camion</code> (atributos: capacidadCargaToneladas, numeroejes). Sobreescribe <code>describir()</code> en cada subclase. Crea un array <code>Vehiculo[]</code> con objetos de los tres tipos, recórrelo llamando a <code>describir()</code> en cada uno.</p>
+<hr />
+<h3 id="tema-24-interfaces-y-clases-abstractas">Tema 2.4 — Interfaces y Clases Abstractas</h3>
+<h4 id="clases-abstractas-la-plantilla-incompleta">Clases abstractas — La plantilla incompleta</h4>
+<p>Una clase abstracta es una clase que <strong>no se puede instanciar directamente</strong>. Es una clase a medias, que obliga a sus subclases a completarla. Si en tu jerarquía tienes conceptos que nunca existen solos (un "Animal" genérico sin especie no tiene mucho sentido), úsala.</p>
+<pre class="codehilite"><code class="language-java">// 'abstract': no se puede hacer 'new Figura()'
+public abstract class Figura {
+
+    private String color;
+
+    public Figura(String color) {
+        this.color = color;
+    }
+
+    public String getColor() { return color; }
+
+    // MÉTODO ABSTRACTO: declarado pero sin implementación
+    // Cada subclase DEBE implementarlo o también será abstracta
+    public abstract double calcularArea();
+    public abstract double calcularPerimetro();
+
+    // MÉTODO CONCRETO: implementado, las subclases lo heredan tal cual
+    public void mostrarInfo() {
+        System.out.printf(&quot;Figura %s (color: %s) | Área: %.2f | Perímetro: %.2f%n&quot;,
+                          getClass().getSimpleName(), color,
+                          calcularArea(), calcularPerimetro());
+    }
+}
+
+public class Circulo extends Figura {
+    private double radio;
+
+    public Circulo(String color, double radio) {
+        super(color);
+        this.radio = radio;
+    }
+
+    @Override
+    public double calcularArea() {
+        return Math.PI * radio * radio;
+    }
+
+    @Override
+    public double calcularPerimetro() {
+        return 2 * Math.PI * radio;
+    }
+}
+
+public class Rectangulo extends Figura {
+    private double base, altura;
+
+    public Rectangulo(String color, double base, double altura) {
+        super(color);
+        this.base = base;
+        this.altura = altura;
+    }
+
+    @Override
+    public double calcularArea() { return base * altura; }
+
+    @Override
+    public double calcularPerimetro() { return 2 * (base + altura); }
+}
+</code></pre>
+
+<h4 id="interfaces-el-contrato-puro">Interfaces — El contrato puro</h4>
+<p>Una interfaz define <strong>qué debe hacer</strong> una clase, sin decir cómo. Es un contrato: "Cualquier clase que implemente esta interfaz GARANTIZA que tiene estos métodos."</p>
+<p>La diferencia clave con la clase abstracta:
+- Una clase puede <strong>heredar de UNA SOLA</strong> clase abstracta
+- Una clase puede <strong>implementar MÚLTIPLES</strong> interfaces</p>
+<pre class="codehilite"><code class="language-java">// Una interfaz define capacidades / comportamientos
+public interface Volable {
+    // Los métodos son public abstract por defecto (no hace falta escribirlo)
+    void despegar();
+    void aterrizar();
+    double getAltitudMaxima();
+
+    // Desde Java 8: métodos 'default' con implementación
+    default void volar() {
+        System.out.println(&quot;Volando a &quot; + getAltitudMaxima() + &quot; metros&quot;);
+    }
+
+    // Desde Java 8: métodos 'static' en interfaces
+    static boolean esCapazDeVolar(Object obj) {
+        return obj instanceof Volable;
+    }
+}
+
+public interface Nadable {
+    void nadar();
+    double getVelocidadNado();
+}
+
+// Una clase puede implementar múltiples interfaces
+public class Pato extends Animal implements Volable, Nadable {
+
+    public Pato(String nombre) {
+        super(nombre, 1, 1.5);
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println(getNombre() + &quot;: ¡Cuac cuac!&quot;);
+    }
+
+    // Implementando Volable
+    @Override
+    public void despegar() { System.out.println(getNombre() + &quot; alza el vuelo&quot;); }
+
+    @Override
+    public void aterrizar() { System.out.println(getNombre() + &quot; aterriza&quot;); }
+
+    @Override
+    public double getAltitudMaxima() { return 500.0; }
+
+    // Implementando Nadable
+    @Override
+    public void nadar() { System.out.println(getNombre() + &quot; nada en el lago&quot;); }
+
+    @Override
+    public double getVelocidadNado() { return 2.5; }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+
+        Pato donald = new Pato(&quot;Donald&quot;);
+
+        // Puedes usar la variable como Animal, Volable, Nadable o Pato
+        Animal a = donald;         a.hacerSonido();     // Cuac cuac
+        Volable v = donald;        v.volar();            // Volando...
+        Nadable n = donald;        n.nadar();            // Nada...
+        Pato p = donald;           p.despegar();         // Alza el vuelo
+
+        // Polimorfismo con interfaces: muy usado en el mundo real
+        List&lt;Volable&gt; seresVoladores = new ArrayList&lt;&gt;();
+        seresVoladores.add(new Pato(&quot;Daisy&quot;));
+        // seresVoladores.add(new Avion(&quot;Boeing&quot;)); // Si Avion implementa Volable
+        for (Volable ser : seresVoladores) {
+            ser.volar(); // No importa qué tipo concreto sea
+        }
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 2.4:</strong>
+Crea un sistema de figuras: clase abstracta <code>Figura</code> con métodos abstractos <code>calcularArea()</code> y <code>calcularPerimetro()</code>. Implementa <code>Circulo</code>, <code>Rectangulo</code> y <code>Triangulo</code>. Crea también una interfaz <code>Dibujable</code> con método <code>dibujar()</code> (que imprima una representación ASCII simple). Implementa <code>Dibujable</code> en <code>Rectangulo</code> y <code>Circulo</code>. Finalmente, calcula el área total de una lista de figuras y muestra las que también son dibujables.</p>
+<hr />
+<h3 id="tema-25-enumeraciones-y-records">Tema 2.5 — Enumeraciones y Records</h3>
+<h4 id="enumeraciones-enum-conjuntos-de-constantes-con-superpoderes">Enumeraciones (<code>enum</code>) — Conjuntos de constantes con superpoderes</h4>
+<p>Un <code>enum</code> define un conjunto <strong>fijo y cerrado</strong> de valores. Mucho mejor que usar enteros o strings mágicos (<code>1 = PENDIENTE</code>, <code>2 = ENVIADO</code>...).</p>
+<pre class="codehilite"><code class="language-java">// Enum simple
+public enum DiaSemana {
+    LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO
+}
+
+// Enum con atributos y métodos (el verdadero poder)
+public enum EstadoPedido {
+
+    PENDIENTE(&quot;Pendiente de procesar&quot;, false),
+    PROCESANDO(&quot;En preparación&quot;, false),
+    ENVIADO(&quot;En camino&quot;, false),
+    ENTREGADO(&quot;Entregado al cliente&quot;, true),  // true = estado final
+    CANCELADO(&quot;Pedido cancelado&quot;, true);       // true = estado final
+
+    // Los enums pueden tener atributos
+    private final String descripcion;
+    private final boolean esFinal;
+
+    // Constructor del enum (siempre privado)
+    EstadoPedido(String descripcion, boolean esFinal) {
+        this.descripcion = descripcion;
+        this.esFinal = esFinal;
+    }
+
+    public String getDescripcion() { return descripcion; }
+    public boolean esFinal() { return esFinal; }
+
+    // Los enums pueden tener métodos
+    public EstadoPedido siguienteEstado() {
+        return switch (this) {
+            case PENDIENTE   -&gt; PROCESANDO;
+            case PROCESANDO  -&gt; ENVIADO;
+            case ENVIADO     -&gt; ENTREGADO;
+            case ENTREGADO, CANCELADO -&gt; throw new IllegalStateException(
+                &quot;No hay siguiente estado desde &quot; + this
+            );
+        };
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+
+        EstadoPedido estado = EstadoPedido.PENDIENTE;
+
+        System.out.println(estado);                    // PENDIENTE
+        System.out.println(estado.getDescripcion());   // &quot;Pendiente de procesar&quot;
+        System.out.println(estado.esFinal());          // false
+        System.out.println(estado.name());             // &quot;PENDIENTE&quot; (nombre del enum)
+        System.out.println(estado.ordinal());          // 0 (posición, empieza en 0)
+
+        // Avanzar al siguiente estado
+        estado = estado.siguienteEstado();
+        System.out.println(estado); // PROCESANDO
+
+        // switch con enum (muy elegante)
+        String mensaje = switch (estado) {
+            case PENDIENTE   -&gt; &quot;Tu pedido espera confirmación&quot;;
+            case PROCESANDO  -&gt; &quot;Estamos preparando tu pedido&quot;;
+            case ENVIADO     -&gt; &quot;Tu pedido está en camino&quot;;
+            case ENTREGADO   -&gt; &quot;¡Pedido entregado!&quot;;
+            case CANCELADO   -&gt; &quot;Pedido cancelado&quot;;
+        };
+
+        // Obtener todos los valores de un enum
+        for (EstadoPedido e : EstadoPedido.values()) {
+            System.out.println(e.name() + &quot; → &quot; + e.getDescripcion());
+        }
+
+        // Convertir String a enum
+        EstadoPedido desde_string = EstadoPedido.valueOf(&quot;ENVIADO&quot;);
+    }
+}
+</code></pre>
+
+<h4 id="records-java-16-dtos-inmutables-sin-boilerplate">Records (Java 16+) — DTOs inmutables sin boilerplate</h4>
+<p>Un <code>Record</code> es una forma concisa de crear clases inmutables para transportar datos. Genera automáticamente: constructor, getters, <code>equals()</code>, <code>hashCode()</code> y <code>toString()</code>.</p>
+<pre class="codehilite"><code class="language-java">// Sin record: clase boilerplate de 50 líneas
+// Con record: una línea
+public record Producto(String nombre, double precio, int stock) {
+    // Automáticamente genera:
+    // - Constructor: Producto(String nombre, double precio, int stock)
+    // - Getters: nombre(), precio(), stock() (sin &quot;get&quot; delante)
+    // - equals(), hashCode(), toString()
+
+    // Puedes añadir validaciones en el constructor compacto
+    public Producto {
+        if (precio &lt; 0) throw new IllegalArgumentException(&quot;Precio no puede ser negativo&quot;);
+        if (stock &lt; 0) throw new IllegalArgumentException(&quot;Stock no puede ser negativo&quot;);
+        nombre = nombre.trim(); // Podemos transformar los valores
+    }
+
+    // Puedes añadir métodos propios
+    public double precioConIVA() {
+        return precio * 1.21;
+    }
+
+    public boolean tieneStock() {
+        return stock &gt; 0;
+    }
+}
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Producto laptop = new Producto(&quot;Laptop Pro&quot;, 999.99, 50);
+
+        System.out.println(laptop.nombre());        // &quot;Laptop Pro&quot; (getter sin &quot;get&quot;)
+        System.out.println(laptop.precio());        // 999.99
+        System.out.println(laptop.precioConIVA());  // 1209.99...
+        System.out.println(laptop);
+        // &quot;Producto[nombre=Laptop Pro, precio=999.99, stock=50]&quot;
+
+        // Records son inmutables: no hay setters
+        // laptop.precio = 500; ← ERROR de compilación
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 2.5:</strong>
+Crea un sistema de pedidos: <code>enum EstadoPedido</code> con estados y transiciones válidas, <code>record Producto(String nombre, double precio)</code>, <code>record LineaPedido(Producto producto, int cantidad)</code> con método <code>subtotal()</code>, y una clase <code>Pedido</code> con lista de líneas, método <code>total()</code>, método <code>añadirProducto()</code> y gestión de estado. Demuestra creando un pedido, añadiendo productos y avanzando su estado.</p>
+<hr />
+<hr />
+<h2 id="nivel-3-intermedio">🟡 NIVEL 3 — INTERMEDIO</h2>
+<hr />
+<h3 id="tema-31-manejo-de-excepciones">Tema 3.1 — Manejo de Excepciones</h3>
+<h4 id="que-es-una-excepcion">¿Qué es una excepción?</h4>
+<p>Una excepción es un <strong>evento anormal</strong> que ocurre durante la ejecución del programa y que interrumpe el flujo normal. Sin manejo de excepciones, un error en cualquier parte del programa lo hace caer por completo con un feo mensaje de error.</p>
+<p>Con manejo de excepciones, puedes <strong>capturar</strong> ese error, reaccionar inteligentemente, y continuar (o terminar limpiamente).</p>
+<h4 id="jerarquia-de-excepciones-en-java">Jerarquía de excepciones en Java</h4>
+<pre class="codehilite"><code>Throwable
+├── Error (no manejes estos: OutOfMemoryError, StackOverflowError)
+│   └── Son problemas graves de la JVM, no hay mucho que hacer
+└── Exception
+    ├── RuntimeException (Unchecked — NO obligatorio manejarlas)
+    │   ├── NullPointerException      → Usaste null como si fuera un objeto
+    │   ├── ArrayIndexOutOfBoundsException → Índice fuera de rango
+    │   ├── ClassCastException        → Cast inválido
+    │   ├── IllegalArgumentException  → Argumento inválido pasado a método
+    │   ├── IllegalStateException     → Estado inválido del objeto
+    │   └── NumberFormatException     → &quot;abc&quot; no se puede convertir a int
+    └── Otras (Checked — SÍ obligatorio manejarlas o declararlas)
+        ├── IOException               → Problemas de entrada/salida
+        ├── FileNotFoundException     → Archivo no encontrado
+        └── SQLException             → Error de base de datos
+</code></pre>
+
+<h4 id="try-catch-finally-la-estructura-basica"><code>try-catch-finally</code> — La estructura básica</h4>
+<pre class="codehilite"><code class="language-java">public class ManejoExcepciones {
+
+    public static void main(String[] args) {
+
+        // ── TRY-CATCH BÁSICO ─────────────────────────────────────────────
+
+        // El bloque 'try' contiene el código que PODRÍA lanzar una excepción
+        // Si ocurre una excepción, el flujo SALTA INMEDIATAMENTE al catch
+        // El código después de la excepción (dentro del try) NO se ejecuta
+        try {
+            int[] numeros = {1, 2, 3};
+            System.out.println(numeros[5]); // ← Lanza ArrayIndexOutOfBoundsException
+            System.out.println(&quot;Esta línea NUNCA se ejecuta si hay excepción arriba&quot;);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // 'e' es el objeto de la excepción, contiene info sobre el error
+            System.out.println(&quot;Error: índice fuera de rango&quot;);
+            System.out.println(&quot;Mensaje: &quot; + e.getMessage());
+            // e.printStackTrace(); // Imprime el stack trace completo (útil para debug)
+        }
+
+        System.out.println(&quot;El programa continúa aquí después del try-catch&quot;);
+
+        // ── MÚLTIPLES CATCH ──────────────────────────────────────────────
+
+        String[] datos = {&quot;42&quot;, &quot;hola&quot;, null, &quot;100&quot;};
+
+        for (String dato : datos) {
+            try {
+                int numero = Integer.parseInt(dato);  // Puede lanzar NumberFormatException
+                System.out.println(100 / numero);     // Puede lanzar ArithmeticException (div/0)
+                System.out.println(dato.length());    // Puede lanzar NullPointerException
+            } catch (NumberFormatException e) {
+                System.out.println(&quot;'&quot; + dato + &quot;' no es un número válido&quot;);
+            } catch (ArithmeticException e) {
+                System.out.println(&quot;División por cero&quot;);
+            } catch (NullPointerException e) {
+                System.out.println(&quot;El dato es null&quot;);
+            }
+            // Java evalúa los catch de arriba a abajo y ejecuta el PRIMER que coincida
+        }
+
+        // ── MULTI-CATCH (Java 7+) ────────────────────────────────────────
+        // Si tratas las excepciones igual, agrúpalas con |
+
+        try {
+            String texto = null;
+            int[] arr = new int[3];
+            System.out.println(texto.length()); // NPE
+            System.out.println(arr[10]);         // AIOOBE
+        } catch (NullPointerException | ArrayIndexOutOfBoundsException e) {
+            System.out.println(&quot;Error de acceso: &quot; + e.getMessage());
+        }
+
+        // ── FINALLY ──────────────────────────────────────────────────────
+        // El bloque 'finally' se ejecuta SIEMPRE: haya excepción o no
+        // Útil para liberar recursos (cerrar archivos, conexiones, etc.)
+
+        System.out.println(&quot;--- Ejemplo finally ---&quot;);
+        try {
+            System.out.println(&quot;Intentando operación...&quot;);
+            int resultado = 10 / 2;
+            System.out.println(&quot;Resultado: &quot; + resultado);
+            // No hay excepción aquí
+        } catch (ArithmeticException e) {
+            System.out.println(&quot;División por cero&quot;);
+        } finally {
+            System.out.println(&quot;Finally: esto se ejecuta SIEMPRE&quot;);
+            // Aquí cerrarías archivos, conexiones de base de datos, etc.
+        }
+        // Salida:
+        // Intentando operación...
+        // Resultado: 5
+        // Finally: esto se ejecuta SIEMPRE
+    }
+}
+</code></pre>
+
+<h4 id="throw-y-throws-lanzar-excepciones"><code>throw</code> y <code>throws</code> — Lanzar excepciones</h4>
+<pre class="codehilite"><code class="language-java">// 'throws' en la firma del método: avisa que PUEDE lanzar esa excepción checked
+// Para excepciones checked (no RuntimeException), el llamador DEBE manejarlas
+public static int dividir(int a, int b) throws ArithmeticException {
+    if (b == 0) {
+        // 'throw' lanza la excepción (crea el objeto y lo lanza)
+        throw new ArithmeticException(&quot;No se puede dividir por cero&quot;);
+    }
+    return a / b;
+}
+
+public static void main(String[] args) {
+    try {
+        System.out.println(dividir(10, 2));  // 5
+        System.out.println(dividir(10, 0));  // Lanza excepción
+    } catch (ArithmeticException e) {
+        System.out.println(&quot;Error: &quot; + e.getMessage());
+    }
+}
+</code></pre>
+
+<h4 id="try-with-resources-el-cierre-automatico-de-recursos"><code>try-with-resources</code> — El cierre automático de recursos</h4>
+<pre class="codehilite"><code class="language-java">// Cuando trabajas con recursos (archivos, conexiones), DEBES cerrarlos.
+// Sin try-with-resources, tienes que cerrarlos en finally (propenso a errores)
+
+// Versión antigua (mala práctica):
+BufferedReader reader = null;
+try {
+    reader = new BufferedReader(new FileReader(&quot;archivo.txt&quot;));
+    String linea = reader.readLine();
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    if (reader != null) {
+        try {
+            reader.close(); // ¡Esto también puede lanzar IOException!
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+// Con try-with-resources (Java 7+):
+// Cualquier objeto que implemente AutoCloseable se cierra automáticamente al salir del bloque
+try (BufferedReader reader = new BufferedReader(new FileReader(&quot;archivo.txt&quot;))) {
+    String linea = reader.readLine();
+    System.out.println(linea);
+} catch (IOException e) {
+    System.out.println(&quot;Error al leer el archivo: &quot; + e.getMessage());
+}
+// reader.close() se llama automáticamente, haya o no excepción
+</code></pre>
+
+<h4 id="excepciones-personalizadas">Excepciones personalizadas</h4>
+<pre class="codehilite"><code class="language-java">// Crear tus propias excepciones para dominio específico
+public class SaldoInsuficienteException extends RuntimeException {
+    // Unchecked (extends RuntimeException): el llamador no está obligado a manejarla
+
+    private final double saldoActual;
+    private final double cantidadSolicitada;
+
+    public SaldoInsuficienteException(double saldoActual, double cantidadSolicitada) {
+        super(String.format(
+            &quot;Saldo insuficiente. Disponible: %.2f€, Solicitado: %.2f€&quot;,
+            saldoActual, cantidadSolicitada
+        ));
+        this.saldoActual = saldoActual;
+        this.cantidadSolicitada = cantidadSolicitada;
+    }
+
+    public double getSaldoActual() { return saldoActual; }
+    public double getCantidadSolicitada() { return cantidadSolicitada; }
+    public double getFaltante() { return cantidadSolicitada - saldoActual; }
+}
+
+// Uso:
+public void retirar(double cantidad) {
+    if (cantidad &gt; saldo) {
+        throw new SaldoInsuficienteException(saldo, cantidad);
+    }
+    saldo -= cantidad;
+}
+
+// Captura:
+try {
+    cuenta.retirar(1000.0);
+} catch (SaldoInsuficienteException e) {
+    System.out.println(e.getMessage());
+    System.out.println(&quot;Te faltan: &quot; + e.getFaltante() + &quot;€&quot;);
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 3.1:</strong>
+Crea un sistema de validación para registro de usuarios. Define excepciones personalizadas: <code>EmailInvalidoException</code>, <code>ContrasenaDebildException</code> (con campo que indique qué falta: longitud, mayúscula, número, símbolo), y <code>EdadInvalidaException</code>. Implementa <code>validarUsuario(String email, String contrasena, int edad)</code> que las lance cuando corresponda. Maneja todas desde el <code>main</code> mostrando mensajes claros al usuario.</p>
+<hr />
+<h3 id="tema-32-el-framework-de-colecciones">Tema 3.2 — El Framework de Colecciones</h3>
+<h4 id="por-que-no-siempre-usar-arrays">¿Por qué no siempre usar arrays?</h4>
+<p>Los arrays tienen limitaciones graves: tamaño fijo, no se pueden insertar elementos en el medio fácilmente, no tienen métodos de búsqueda... Las <strong>colecciones</strong> resuelven todo esto.</p>
+<pre class="codehilite"><code>Collection (interfaz)
+├── List (interfaz) — Secuencia ordenada, permite duplicados
+│   ├── ArrayList   → Array dinámico. Rápido para acceder por índice
+│   └── LinkedList  → Lista de nodos enlazados. Rápido para insertar/eliminar
+├── Set (interfaz) — No permite duplicados
+│   ├── HashSet     → Sin orden garantizado, muy rápido
+│   ├── LinkedHashSet → Mantiene orden de inserción
+│   └── TreeSet     → Ordenado automáticamente (orden natural o Comparator)
+└── Queue (interfaz) — Cola FIFO
+    └── ArrayDeque  → Cola o pila eficiente
+
+Map (interfaz, NO hereda de Collection)
+├── HashMap         → Sin orden, muy rápido
+├── LinkedHashMap   → Mantiene orden de inserción
+└── TreeMap         → Ordenado por clave
+</code></pre>
+
+<h4 id="arraylist-tu-coleccion-mas-usada"><code>ArrayList</code> — Tu colección más usada</h4>
+<pre class="codehilite"><code class="language-java">import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class EjemploArrayList {
+    public static void main(String[] args) {
+
+        // Crear ArrayList (la interfaz List es el tipo recomendado para la variable)
+        List&lt;String&gt; nombres = new ArrayList&lt;&gt;(); // &lt;String&gt;: solo acepta Strings (genérico)
+
+        // ── AÑADIR ELEMENTOS ─────────────────────────────────────────────
+        nombres.add(&quot;Ana&quot;);
+        nombres.add(&quot;Carlos&quot;);
+        nombres.add(&quot;Beatriz&quot;);
+        nombres.add(&quot;Ana&quot;);          // Los duplicados sí están permitidos
+        nombres.add(1, &quot;David&quot;);     // Insertar en posición 1 (desplaza los demás)
+
+        System.out.println(nombres); // [Ana, David, Carlos, Beatriz, Ana]
+        System.out.println(&quot;Tamaño: &quot; + nombres.size()); // 5 (.size() no .length)
+
+        // ── ACCEDER ──────────────────────────────────────────────────────
+        System.out.println(nombres.get(0));   // &quot;Ana&quot; (índice 0)
+        System.out.println(nombres.get(nombres.size() - 1)); // Último elemento
+
+        // ── BUSCAR ───────────────────────────────────────────────────────
+        System.out.println(nombres.contains(&quot;Carlos&quot;));  // true
+        System.out.println(nombres.indexOf(&quot;Ana&quot;));      // 0 (primera ocurrencia)
+        System.out.println(nombres.lastIndexOf(&quot;Ana&quot;));  // 4 (última ocurrencia)
+
+        // ── MODIFICAR ────────────────────────────────────────────────────
+        nombres.set(0, &quot;Alicia&quot;); // Reemplaza el elemento en posición 0
+
+        // ── ELIMINAR ─────────────────────────────────────────────────────
+        nombres.remove(&quot;Carlos&quot;);      // Elimina por valor (la primera ocurrencia)
+        nombres.remove(0);             // Elimina por índice
+        // ⚠️ Con Integer: nombres.remove(Integer.valueOf(2)) elimina el valor 2,
+        //                 nombres.remove(2) elimina el índice 2
+
+        // ── RECORRER ─────────────────────────────────────────────────────
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+
+        // ── ORDENAR ──────────────────────────────────────────────────────
+        Collections.sort(nombres);                    // Orden alfabético
+        Collections.sort(nombres, Collections.reverseOrder()); // Orden inverso
+        nombres.sort((a, b) -&gt; a.length() - b.length()); // Por longitud (lambda)
+
+        // ── OTRAS OPERACIONES ────────────────────────────────────────────
+        List&lt;String&gt; sublista = nombres.subList(0, 2); // Sublista [0, 2) — posiciones 0 y 1
+        List&lt;String&gt; copia = new ArrayList&lt;&gt;(nombres); // Copia independiente
+        nombres.clear(); // Vaciar la lista
+        System.out.println(nombres.isEmpty()); // true
+    }
+}
+</code></pre>
+
+<h4 id="hashmap-el-diccionario-de-java"><code>HashMap</code> — El diccionario de Java</h4>
+<pre class="codehilite"><code class="language-java">import java.util.HashMap;
+import java.util.Map;
+
+public class EjemploHashMap {
+    public static void main(String[] args) {
+
+        // Map&lt;Clave, Valor&gt;
+        Map&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+
+        // ── AÑADIR / ACTUALIZAR ──────────────────────────────────────────
+        edades.put(&quot;Ana&quot;, 28);
+        edades.put(&quot;Carlos&quot;, 32);
+        edades.put(&quot;Beatriz&quot;, 25);
+        edades.put(&quot;Ana&quot;, 29);  // Sobreescribe el valor anterior de &quot;Ana&quot;
+
+        System.out.println(edades); // {Ana=29, Carlos=32, Beatriz=25} (orden no garantizado)
+        System.out.println(&quot;Tamaño: &quot; + edades.size()); // 3
+
+        // ── ACCEDER ──────────────────────────────────────────────────────
+        System.out.println(edades.get(&quot;Carlos&quot;));         // 32
+        System.out.println(edades.get(&quot;Inexistente&quot;));    // null (no lanza excepción)
+        System.out.println(edades.getOrDefault(&quot;X&quot;, 0)); // 0 (valor por defecto si no existe)
+
+        // ── BUSCAR ───────────────────────────────────────────────────────
+        System.out.println(edades.containsKey(&quot;Ana&quot;));   // true
+        System.out.println(edades.containsValue(25));    // true
+
+        // ── ELIMINAR ─────────────────────────────────────────────────────
+        edades.remove(&quot;Beatriz&quot;);
+        edades.remove(&quot;Carlos&quot;, 99); // Solo elimina si el valor es 99 (no elimina, es 32)
+
+        // ── RECORRER ─────────────────────────────────────────────────────
+
+        // Por claves
+        for (String clave : edades.keySet()) {
+            System.out.println(&quot;Clave: &quot; + clave);
+        }
+
+        // Por valores
+        for (int valor : edades.values()) {
+            System.out.println(&quot;Valor: &quot; + valor);
+        }
+
+        // Por entradas (la forma más útil)
+        for (Map.Entry&lt;String, Integer&gt; entrada : edades.entrySet()) {
+            System.out.println(entrada.getKey() + &quot; tiene &quot; + entrada.getValue() + &quot; años&quot;);
+        }
+
+        // ── OPERACIONES ÚTILES ───────────────────────────────────────────
+
+        // putIfAbsent: solo añade si la clave no existe
+        edades.putIfAbsent(&quot;Diana&quot;, 30);
+        edades.putIfAbsent(&quot;Ana&quot;, 99); // No hace nada, &quot;Ana&quot; ya existe
+
+        // merge: combina el valor existente con el nuevo
+        Map&lt;String, Integer&gt; frecuencias = new HashMap&lt;&gt;();
+        String[] palabras = {&quot;hola&quot;, &quot;mundo&quot;, &quot;hola&quot;, &quot;java&quot;, &quot;hola&quot;};
+        for (String palabra : palabras) {
+            // Si la clave no existe, pone 1; si existe, suma 1 al valor actual
+            frecuencias.merge(palabra, 1, Integer::sum);
+        }
+        System.out.println(frecuencias); // {hola=3, mundo=1, java=1}
+    }
+}
+</code></pre>
+
+<h4 id="hashset-coleccion-sin-duplicados"><code>HashSet</code> — Colección sin duplicados</h4>
+<pre class="codehilite"><code class="language-java">import java.util.HashSet;
+import java.util.Set;
+
+Set&lt;String&gt; conjunto = new HashSet&lt;&gt;();
+conjunto.add(&quot;manzana&quot;);
+conjunto.add(&quot;pera&quot;);
+conjunto.add(&quot;manzana&quot;); // Ignorado: ya existe
+conjunto.add(&quot;naranja&quot;);
+
+System.out.println(conjunto.size());           // 3 (no 4)
+System.out.println(conjunto.contains(&quot;pera&quot;)); // true
+
+// Operaciones de conjuntos
+Set&lt;Integer&gt; setA = new HashSet&lt;&gt;(Set.of(1, 2, 3, 4, 5));
+Set&lt;Integer&gt; setB = new HashSet&lt;&gt;(Set.of(3, 4, 5, 6, 7));
+
+// Intersección (elementos comunes)
+Set&lt;Integer&gt; interseccion = new HashSet&lt;&gt;(setA);
+interseccion.retainAll(setB);
+System.out.println(&quot;Intersección: &quot; + interseccion); // [3, 4, 5]
+
+// Unión (todos los elementos)
+Set&lt;Integer&gt; union = new HashSet&lt;&gt;(setA);
+union.addAll(setB);
+System.out.println(&quot;Unión: &quot; + union); // [1, 2, 3, 4, 5, 6, 7]
+
+// Diferencia (en A pero no en B)
+Set&lt;Integer&gt; diferencia = new HashSet&lt;&gt;(setA);
+diferencia.removeAll(setB);
+System.out.println(&quot;Diferencia: &quot; + diferencia); // [1, 2]
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 3.2:</strong>
+Implementa un sistema de inventario de una tienda usando <code>HashMap&lt;String, Integer&gt;</code> (producto → cantidad). Implementa métodos: <code>añadirProducto</code>, <code>actualizarStock</code>, <code>eliminarProducto</code>, <code>buscarProducto</code> (que devuelva <code>Optional&lt;Integer&gt;</code>), <code>productosConStockBajo(int umbral)</code>, y <code>top3ProductosMasStock()</code>. Usa <code>TreeMap</code> para mostrar el inventario ordenado alfabéticamente.</p>
+<hr />
+<h3 id="tema-33-lambdas-y-programacion-funcional">Tema 3.3 — Lambdas y Programación Funcional</h3>
+<h4 id="que-es-una-expresion-lambda">¿Qué es una expresión lambda?</h4>
+<p>Una lambda es una <strong>función anónima</strong> — una función sin nombre que puedes tratar como un valor: guardarla en una variable, pasarla como parámetro, devolverla desde un método.</p>
+<p>Antes de lambdas (Java 7), tenías que crear clases anónimas para pasar comportamiento. Con lambdas (Java 8+), el código es mucho más conciso.</p>
+<pre class="codehilite"><code class="language-java">// ANTES de lambdas: clase anónima (verboso y feo)
+Comparator&lt;String&gt; comparadorAntiguo = new Comparator&lt;String&gt;() {
+    @Override
+    public int compare(String a, String b) {
+        return a.compareTo(b);
+    }
+};
+
+// CON lambda: mucho más limpio
+Comparator&lt;String&gt; comparadorNuevo = (a, b) -&gt; a.compareTo(b);
+
+// Aún más conciso con referencia a método:
+Comparator&lt;String&gt; comparadorRef = String::compareTo;
+</code></pre>
+
+<h4 id="interfaces-funcionales-el-fundamento-de-las-lambdas">Interfaces funcionales — El fundamento de las lambdas</h4>
+<p>Una lambda solo puede usarse donde se espera una <strong>interfaz funcional</strong> (interfaz con un único método abstracto).</p>
+<pre class="codehilite"><code class="language-java">import java.util.function.*;
+
+public class InterfacesFuncionales {
+    public static void main(String[] args) {
+
+        // ── Function&lt;T, R&gt;: recibe T, devuelve R ─────────────────────────
+        Function&lt;String, Integer&gt; longitud = s -&gt; s.length();
+        Function&lt;String, Integer&gt; longitudRef = String::length; // Referencia a método
+        System.out.println(longitud.apply(&quot;Hola&quot;));    // 4
+        System.out.println(longitudRef.apply(&quot;Java&quot;)); // 4
+
+        // Composición de funciones
+        Function&lt;String, String&gt; mayusculas = String::toUpperCase;
+        Function&lt;String, Integer&gt; longitudMayuscula = mayusculas.andThen(longitud);
+        // andThen: primero aplica mayusculas, luego longitud al resultado
+        System.out.println(longitudMayuscula.apply(&quot;hola&quot;)); // 4
+
+        // ── Predicate&lt;T&gt;: recibe T, devuelve boolean ──────────────────────
+        Predicate&lt;String&gt; esVacio = String::isEmpty;
+        Predicate&lt;String&gt; esLargo = s -&gt; s.length() &gt; 5;
+        Predicate&lt;String&gt; esLargoYNoVacio = esLargo.and(Predicate.not(esVacio));
+        Predicate&lt;String&gt; esVacioOLargo = esVacio.or(esLargo);
+        Predicate&lt;String&gt; noEsVacio = esVacio.negate();
+
+        System.out.println(esLargo.test(&quot;Hola&quot;));            // false
+        System.out.println(esLargo.test(&quot;Hola mundo&quot;));      // true
+        System.out.println(esVacioOLargo.test(&quot;&quot;));          // true (es vacío)
+        System.out.println(esVacioOLargo.test(&quot;Hola mundo&quot;)); // true (es largo)
+
+        // ── Consumer&lt;T&gt;: recibe T, no devuelve nada (efecto secundario) ───
+        Consumer&lt;String&gt; imprimir = System.out::println;
+        Consumer&lt;String&gt; imprimirMayus = s -&gt; System.out.println(s.toUpperCase());
+        Consumer&lt;String&gt; ambos = imprimir.andThen(imprimirMayus);
+
+        imprimir.accept(&quot;Hola&quot;);        // &quot;Hola&quot;
+        ambos.accept(&quot;Hola&quot;);           // &quot;Hola&quot; y luego &quot;HOLA&quot;
+
+        // ── Supplier&lt;T&gt;: no recibe nada, devuelve T ───────────────────────
+        Supplier&lt;String&gt; saludo = () -&gt; &quot;¡Hola, mundo!&quot;;
+        Supplier&lt;Double&gt; random = Math::random;
+
+        System.out.println(saludo.get());  // &quot;¡Hola, mundo!&quot;
+        System.out.println(random.get());  // número aleatorio
+
+        // ── BiFunction&lt;T, U, R&gt;: recibe T y U, devuelve R ────────────────
+        BiFunction&lt;String, Integer, String&gt; repetir = (s, n) -&gt; s.repeat(n);
+        System.out.println(repetir.apply(&quot;Java! &quot;, 3)); // &quot;Java! Java! Java! &quot;
+
+        // ── UnaryOperator&lt;T&gt;: recibe T, devuelve T (Function especializada) ──
+        UnaryOperator&lt;String&gt; trim = String::trim;
+        UnaryOperator&lt;Integer&gt; doble = n -&gt; n * 2;
+
+        // ── BinaryOperator&lt;T&gt;: recibe dos T, devuelve T ────────────────────
+        BinaryOperator&lt;Integer&gt; suma = (a, b) -&gt; a + b;
+        BinaryOperator&lt;String&gt; concatenar = String::concat;
+
+        System.out.println(suma.apply(3, 4));        // 7
+        System.out.println(concatenar.apply(&quot;Ho&quot;, &quot;la&quot;)); // &quot;Hola&quot;
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 3.3:</strong>
+Sin usar bucles <code>for</code>/<code>while</code>, usando solo lambdas y métodos de List: procesa una lista de 20 nombres de personas. Usando <code>Predicate</code>, filtra los que tienen más de 5 letras. Usando <code>Function</code>, transforma los nombres a formato "APELLIDO, Nombre". Usando <code>Consumer</code>, imprime cada resultado. Además, implementa un validador de contraseñas que combine múltiples <code>Predicate&lt;String&gt;</code> con <code>and()</code>.</p>
+<hr />
+<hr />
+<h2 id="nivel-4-avanzado">🟠 NIVEL 4 — AVANZADO</h2>
+<hr />
+<h3 id="tema-41-stream-api">Tema 4.1 — Stream API</h3>
+<h4 id="que-es-un-stream">¿Qué es un Stream?</h4>
+<p>Un Stream es una <strong>secuencia de elementos sobre la que puedes aplicar operaciones encadenadas</strong> de forma declarativa (dices QUÉ quieres, no CÓMO hacerlo). No almacena datos: es una pipeline de transformaciones.</p>
+<p>Características clave:
+- <strong>Lazy</strong> (perezoso): las operaciones intermedias no se ejecutan hasta que hay una operación terminal
+- <strong>Consumible</strong>: un stream solo puede usarse una vez
+- <strong>No modifica la fuente</strong>: no cambia la lista/array original</p>
+<pre class="codehilite"><code>Fuente → [Op. Intermedia] → [Op. Intermedia] → [Op. Terminal]
+  │             │                   │                  │
+  │         filter()             map()            collect()
+  │       (devuelve Stream)   (devuelve Stream)  (consume el stream)
+  └── List, array, archivo, generador...
+</code></pre>
+
+<pre class="codehilite"><code class="language-java">import java.util.*;
+import java.util.stream.*;
+
+public class StreamAPI {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; nombres = List.of(&quot;Ana&quot;, &quot;Carlos&quot;, &quot;Beatriz&quot;, &quot;David&quot;,
+                                       &quot;Elena&quot;, &quot;Carlos&quot;, &quot;Fernando&quot;, &quot;Ana&quot;);
+
+        // ── CREAR STREAMS ─────────────────────────────────────────────────
+        Stream&lt;String&gt; desde_lista = nombres.stream();
+        Stream&lt;Integer&gt; desde_valores = Stream.of(1, 2, 3, 4, 5);
+        IntStream rango = IntStream.rangeClosed(1, 100); // 1 a 100 inclusive
+        Stream&lt;String&gt; infinito = Stream.generate(() -&gt; &quot;hola&quot;); // ¡Necesita limit()!
+        Stream&lt;Integer&gt; iterado = Stream.iterate(0, n -&gt; n + 2).limit(10); // 0,2,4,6,...
+
+        // ── OPERACIONES INTERMEDIAS (devuelven Stream) ────────────────────
+
+        // filter: mantiene solo los elementos que cumplen el Predicate
+        nombres.stream()
+               .filter(n -&gt; n.length() &gt; 4) // Solo nombres con más de 4 letras
+               .forEach(System.out::println); // Ana: 3 letras → fuera. Carlos: 6 → pasa
+
+        // map: transforma cada elemento (cambia el tipo o valor)
+        nombres.stream()
+               .map(String::toUpperCase)     // String → String (en mayúsculas)
+               .map(n -&gt; n + &quot;!&quot;)            // Añade &quot;!&quot; al final
+               .forEach(System.out::println);
+
+        // map que cambia el tipo
+        nombres.stream()
+               .map(String::length)          // Stream&lt;String&gt; → Stream&lt;Integer&gt;
+               .forEach(n -&gt; System.out.print(n + &quot; &quot;)); // 3 6 7 5 5 6 8 3
+
+        // distinct: elimina duplicados (usa equals/hashCode)
+        nombres.stream()
+               .distinct()
+               .forEach(System.out::println); // Ana, Carlos, Beatriz, David, Elena, Fernando
+
+        // sorted: ordena (orden natural o con Comparator)
+        nombres.stream()
+               .sorted()                             // Orden alfabético
+               .forEach(System.out::println);
+
+        nombres.stream()
+               .sorted(Comparator.comparingInt(String::length).reversed()) // Por longitud desc
+               .forEach(System.out::println);
+
+        // limit y skip: paginación
+        nombres.stream()
+               .skip(2)   // Salta los 2 primeros
+               .limit(3)  // Toma los siguientes 3
+               .forEach(System.out::println);
+
+        // flatMap: &quot;aplana&quot; streams de streams (cuando map devuelve Stream)
+        List&lt;List&lt;Integer&gt;&gt; listaDelistas = List.of(
+            List.of(1, 2, 3),
+            List.of(4, 5),
+            List.of(6, 7, 8, 9)
+        );
+        listaDelistas.stream()
+                     .flatMap(Collection::stream) // Cada List&lt;Integer&gt; se &quot;aplana&quot; en su Stream
+                     .forEach(n -&gt; System.out.print(n + &quot; &quot;)); // 1 2 3 4 5 6 7 8 9
+
+        // peek: para depuración (efecto secundario sin consumir el stream)
+        List&lt;Integer&gt; resultado = IntStream.rangeClosed(1, 10)
+            .boxed()
+            .filter(n -&gt; n % 2 == 0)
+            .peek(n -&gt; System.out.println(&quot;Pasó filter: &quot; + n))
+            .map(n -&gt; n * n)
+            .peek(n -&gt; System.out.println(&quot;Después de map: &quot; + n))
+            .collect(Collectors.toList());
+
+        // ── OPERACIONES TERMINALES (consumen el stream) ───────────────────
+
+        // collect: recopila en una colección
+        List&lt;String&gt; lista = nombres.stream()
+                                    .filter(n -&gt; n.length() &gt; 4)
+                                    .collect(Collectors.toList()); // o toUnmodifiableList()
+
+        Set&lt;String&gt; conjunto = nombres.stream()
+                                      .collect(Collectors.toSet()); // Sin duplicados
+
+        String unido = nombres.stream()
+                              .distinct()
+                              .collect(Collectors.joining(&quot;, &quot;, &quot;[&quot;, &quot;]&quot;)); // &quot;[Ana, Carlos, ...]&quot;
+
+        Map&lt;Integer, List&lt;String&gt;&gt; porLongitud = nombres.stream()
+            .collect(Collectors.groupingBy(String::length)); // Agrupa por longitud
+        // {3=[Ana, Ana], 6=[Carlos, Carlos], 7=[Beatriz], 5=[David, Elena], 8=[Fernando]}
+
+        Map&lt;Boolean, List&lt;String&gt;&gt; particion = nombres.stream()
+            .collect(Collectors.partitioningBy(n -&gt; n.length() &gt; 4));
+        // {false=[Ana, Ana], true=[Carlos, Beatriz, David, Elena, Carlos, Fernando]}
+
+        // reduce: combina todos los elementos en uno
+        int sumaTotal = IntStream.rangeClosed(1, 100).sum(); // Suma 1 a 100 = 5050
+        Optional&lt;String&gt; masLargo = nombres.stream()
+                                           .reduce((a, b) -&gt; a.length() &gt;= b.length() ? a : b);
+
+        // count, min, max, anyMatch, allMatch, noneMatch, findFirst, findAny
+        long cantidad = nombres.stream().filter(n -&gt; n.startsWith(&quot;A&quot;)).count(); // 2
+        Optional&lt;String&gt; primero = nombres.stream().filter(n -&gt; n.length() &gt; 6).findFirst();
+        boolean algunoLargo = nombres.stream().anyMatch(n -&gt; n.length() &gt; 7); // true (Fernando)
+        boolean todosCortos = nombres.stream().allMatch(n -&gt; n.length() &lt; 10); // true
+
+        System.out.println(&quot;Nombres con A: &quot; + cantidad);
+        primero.ifPresent(n -&gt; System.out.println(&quot;Primero con &gt;6 letras: &quot; + n));
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 4.1:</strong>
+Dado un <code>List&lt;Empleado&gt;</code> donde <code>Empleado</code> tiene nombre, departamento, salario y años de experiencia, usando <strong>SOLO Stream API</strong>: calcula salario promedio por departamento, top 3 mejores pagados, departamento con más empleados, empleados con &gt;5 años y salario&lt;30000 (candidatos a aumento), y genera un informe en String con <code>Collectors.joining</code>.</p>
+<hr />
+<h3 id="tema-42-optional">Tema 4.2 — Optional</h3>
+<h4 id="el-problema-del-nullpointerexception">El problema del NullPointerException</h4>
+<p>El NPE es el error más común en Java. <code>Optional&lt;T&gt;</code> es un contenedor que puede o no contener un valor, forzándote a manejar el caso de "sin valor" explícitamente.</p>
+<pre class="codehilite"><code class="language-java">import java.util.Optional;
+
+public class EjemploOptional {
+
+    // ── CREAR Optional ────────────────────────────────────────────────────
+
+    Optional&lt;String&gt; conValor = Optional.of(&quot;Hola&quot;);           // Con valor (no puede ser null)
+    Optional&lt;String&gt; nullable = Optional.ofNullable(null);     // Puede ser null → Optional.empty()
+    Optional&lt;String&gt; vacio = Optional.empty();                  // Vacío explícitamente
+
+    // Optional.of(null) lanza NullPointerException
+    // Optional.ofNullable(null) → Optional.empty()
+
+    public static void main(String[] args) {
+
+        Optional&lt;String&gt; opt = Optional.of(&quot;Java&quot;);
+
+        // ── VERIFICAR Y OBTENER ───────────────────────────────────────────
+
+        opt.isPresent();   // true: tiene valor
+        opt.isEmpty();     // false: no está vacío (Java 11+)
+
+        // get() devuelve el valor, pero lanza NoSuchElementException si está vacío
+        // ¡Nunca uses get() sin verificar antes con isPresent()!
+        String valor = opt.get(); // &quot;Java&quot; — seguro porque sabemos que no está vacío
+
+        opt.orElse(&quot;Valor por defecto&quot;);       // Si vacío, devuelve &quot;Valor por defecto&quot;
+        opt.orElseGet(() -&gt; &quot;Calculado&quot;);      // Si vacío, ejecuta el Supplier (lazy)
+        opt.orElseThrow();                     // Si vacío, lanza NoSuchElementException
+        opt.orElseThrow(() -&gt; new RuntimeException(&quot;¡Sin valor!&quot;)); // Excepción personalizada
+
+        // ── TRANSFORMAR ──────────────────────────────────────────────────
+
+        Optional&lt;Integer&gt; longitud = opt.map(String::length); // Optional.of(4)
+        Optional&lt;String&gt; mayusculas = opt.map(String::toUpperCase); // Optional.of(&quot;JAVA&quot;)
+
+        // flatMap: cuando map devuelve Optional&lt;Optional&lt;T&gt;&gt;, flatMap aplana
+        Optional&lt;Optional&lt;String&gt;&gt; doble = opt.map(s -&gt; Optional.of(s.toUpperCase()));
+        Optional&lt;String&gt; plano = opt.flatMap(s -&gt; Optional.of(s.toUpperCase())); // Mejor
+
+        Optional&lt;String&gt; filtrado = opt.filter(s -&gt; s.length() &gt; 3); // Optional.of(&quot;Java&quot;)
+        Optional&lt;String&gt; filtradoVacio = opt.filter(s -&gt; s.length() &gt; 10); // Optional.empty()
+
+        // ── EFECTOS SECUNDARIOS ──────────────────────────────────────────
+
+        opt.ifPresent(s -&gt; System.out.println(&quot;Valor: &quot; + s)); // Ejecuta si hay valor
+
+        opt.ifPresentOrElse(
+            s -&gt; System.out.println(&quot;Valor: &quot; + s),
+            () -&gt; System.out.println(&quot;Sin valor&quot;) // Java 9+
+        );
+
+        // ── USO EN CADENA (el patrón más poderoso) ────────────────────────
+
+        // Sin Optional (propenso a NPE):
+        // String ciudad = usuario.getDireccion().getCiudad().toUpperCase();
+
+        // Con Optional (seguro):
+        Optional&lt;String&gt; ciudadMayus = Optional.ofNullable(getUsuario())
+            .map(u -&gt; u.getDireccion())
+            .map(d -&gt; d.getCiudad())
+            .map(String::toUpperCase);
+
+        System.out.println(ciudadMayus.orElse(&quot;Ciudad desconocida&quot;));
+
+        // ── CUÁNDO NO USAR Optional ──────────────────────────────────────
+        // ❌ Como campo de una clase: private Optional&lt;String&gt; nombre; — usa null o &quot;&quot;
+        // ❌ Como parámetro de método: método(Optional&lt;String&gt; opt) — usa sobrecarga
+        // ❌ En colecciones: List&lt;Optional&lt;String&gt;&gt; — usa filter() antes
+        // ✅ Como tipo de retorno de métodos que pueden no encontrar un resultado
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 4.2:</strong>
+Implementa un repositorio de libros en memoria (<code>List&lt;Libro&gt;</code> donde <code>Libro</code> tiene isbn, título, autor, año). Todos los métodos de búsqueda deben retornar <code>Optional&lt;Libro&gt;</code> o <code>List&lt;Libro&gt;</code>. Implementa: <code>buscarPorIsbn</code>, <code>buscarPorTitulo</code>, <code>buscarPorAutor</code>. Encadena: buscar un libro por ISBN → obtener su autor → buscar otros libros del autor → devolver el más reciente. Todo sin un solo <code>null</code> explícito.</p>
+<hr />
+<h3 id="tema-43-concurrencia-hilos-y-javautilconcurrent">Tema 4.3 — Concurrencia: Hilos y <code>java.util.concurrent</code></h3>
+<h4 id="por-que-concurrencia">¿Por qué concurrencia?</h4>
+<p>Tu CPU tiene múltiples núcleos. Sin concurrencia, tu programa usa solo uno. La concurrencia permite aprovechar todos los núcleos y no bloquear el programa mientras espera (E/S, red, etc.).</p>
+<pre class="codehilite"><code class="language-java">import java.util.concurrent.*;
+import java.util.concurrent.atomic.*;
+
+public class Concurrencia {
+
+    // ── CREAR HILOS ───────────────────────────────────────────────────────
+
+    // Forma 1: extender Thread (no recomendada)
+    static class MiHilo extends Thread {
+        @Override
+        public void run() {
+            System.out.println(&quot;Hilo &quot; + getName() + &quot; ejecutándose&quot;);
+        }
+    }
+
+    // Forma 2: implementar Runnable (mejor)
+    static class MiTarea implements Runnable {
+        private final String nombre;
+        public MiTarea(String nombre) { this.nombre = nombre; }
+
+        @Override
+        public void run() {
+            System.out.println(&quot;Tarea &quot; + nombre + &quot; en hilo &quot; + Thread.currentThread().getName());
+            try {
+                Thread.sleep(1000); // Simular trabajo (pausa 1 segundo)
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); // Restaurar el flag de interrupción
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        // Crear y arrancar hilos manualmente (NO hagas esto en producción)
+        Thread hilo1 = new Thread(new MiTarea(&quot;A&quot;));
+        Thread hilo2 = new Thread(new MiTarea(&quot;B&quot;));
+        hilo1.start(); // Arranca el hilo (llama a run() en nuevo hilo)
+        hilo2.start();
+        hilo1.join();  // Espera a que hilo1 termine
+        hilo2.join();
+
+        // ── EXECUTOR SERVICE (la forma correcta) ─────────────────────────
+        // Pool de hilos: reutiliza hilos en vez de crear/destruir cada vez
+
+        ExecutorService executor = Executors.newFixedThreadPool(4); // 4 hilos
+
+        // submit con Runnable (sin retorno)
+        executor.submit(() -&gt; System.out.println(&quot;Tarea lambda en pool&quot;));
+
+        // submit con Callable (CON retorno)
+        Future&lt;Integer&gt; futuro = executor.submit(() -&gt; {
+            Thread.sleep(500); // Simular trabajo
+            return 42; // Este valor se devuelve
+        });
+
+        System.out.println(&quot;Haciendo otras cosas mientras el hilo trabaja...&quot;);
+        Integer resultado = futuro.get(); // Bloquea hasta que el Future tenga resultado
+        System.out.println(&quot;Resultado: &quot; + resultado); // 42
+
+        executor.shutdown(); // Deja terminar las tareas pendientes y cierra el pool
+        executor.awaitTermination(10, TimeUnit.SECONDS); // Espera máximo 10 segundos
+
+        // ── COMPLETABLE FUTURE (programación asíncrona moderna) ───────────
+
+        CompletableFuture&lt;String&gt; futuro1 = CompletableFuture
+            .supplyAsync(() -&gt; {        // Ejecuta en hilo del pool
+                simularTrabajo(500);
+                return &quot;Datos del servidor A&quot;;
+            })
+            .thenApply(datos -&gt; datos.toUpperCase()) // Transforma el resultado
+            .thenApply(datos -&gt; &quot;Procesado: &quot; + datos)
+            .exceptionally(ex -&gt; &quot;Error: &quot; + ex.getMessage()); // Manejo de error
+
+        // Combinar dos futuros en paralelo
+        CompletableFuture&lt;String&gt; futuroA = CompletableFuture.supplyAsync(() -&gt; {
+            simularTrabajo(300); return &quot;Resultado A&quot;;
+        });
+        CompletableFuture&lt;String&gt; futuroB = CompletableFuture.supplyAsync(() -&gt; {
+            simularTrabajo(200); return &quot;Resultado B&quot;;
+        });
+
+        // thenCombine: espera a los DOS y combina sus resultados
+        CompletableFuture&lt;String&gt; combinado = futuroA.thenCombine(
+            futuroB,
+            (a, b) -&gt; a + &quot; + &quot; + b
+        );
+        System.out.println(combinado.get()); // &quot;Resultado A + Resultado B&quot;
+
+        // ── TIPOS ATÓMICOS: operaciones thread-safe sin synchronized ──────
+
+        AtomicInteger contador = new AtomicInteger(0);
+
+        // Lanzar 100 hilos que incrementen el contador
+        ExecutorService pool = Executors.newFixedThreadPool(10);
+        for (int i = 0; i &lt; 100; i++) {
+            pool.submit(() -&gt; contador.incrementAndGet()); // Thread-safe
+        }
+        pool.shutdown();
+        pool.awaitTermination(5, TimeUnit.SECONDS);
+        System.out.println(&quot;Contador final: &quot; + contador.get()); // Siempre 100
+
+        // Sin AtomicInteger, usando int normal: puede ser &lt;100 por condición de carrera
+    }
+
+    static void simularTrabajo(int ms) {
+        try { Thread.sleep(ms); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 4.3:</strong>
+Implementa un buscador que consulte 5 fuentes simuladas en paralelo usando <code>CompletableFuture</code>. Cada fuente tarda un tiempo aleatorio (0-2 segundos). Combina todos los resultados, maneja las que fallen con un valor por defecto, y mide cuánto tiempo tardó en total vs cuánto habría tardado secuencialmente.</p>
+<hr />
+<h2 id="nivel-5-experto">🔴 NIVEL 5 — EXPERTO</h2>
+<hr />
+<h3 id="tema-51-patrones-de-diseno">Tema 5.1 — Patrones de Diseño</h3>
+<p>Los patrones de diseño son <strong>soluciones probadas a problemas recurrentes</strong> en el diseño de software. No son código que copiar, sino guías de cómo estructurar tus clases.</p>
+<h4 id="patron-builder-construir-objetos-complejos-paso-a-paso">Patrón Builder — Construir objetos complejos paso a paso</h4>
+<p>Usado cuando un objeto tiene muchos parámetros opcionales. Evita constructores con 10 parámetros.</p>
+<pre class="codehilite"><code class="language-java">// El objeto a construir (inmutable, muchos campos)
+public class Pedido {
+    private final String cliente;
+    private final List&lt;String&gt; productos;
+    private final String direccionEnvio;
+    private final String tipoPago;
+    private final boolean envioExpress;
+    private final String cuponDescuento;
+    private final String notas;
+
+    // Constructor privado: solo el Builder puede crearlo
+    private Pedido(Builder builder) {
+        this.cliente = builder.cliente;
+        this.productos = List.copyOf(builder.productos);
+        this.direccionEnvio = builder.direccionEnvio;
+        this.tipoPago = builder.tipoPago;
+        this.envioExpress = builder.envioExpress;
+        this.cuponDescuento = builder.cuponDescuento;
+        this.notas = builder.notas;
+    }
+
+    // Getters...
+    public String getCliente() { return cliente; }
+    // ...
+
+    @Override
+    public String toString() {
+        return String.format(&quot;Pedido[cliente=%s, productos=%s, express=%s, cupon=%s]&quot;,
+                             cliente, productos, envioExpress, cuponDescuento);
+    }
+
+    // Clase Builder estática anidada
+    public static class Builder {
+        // Campos obligatorios
+        private final String cliente;
+        private final List&lt;String&gt; productos = new ArrayList&lt;&gt;();
+        private final String direccionEnvio;
+
+        // Campos opcionales con valores por defecto
+        private String tipoPago = &quot;Tarjeta&quot;;
+        private boolean envioExpress = false;
+        private String cuponDescuento = null;
+        private String notas = &quot;&quot;;
+
+        // Constructor del Builder con los campos OBLIGATORIOS
+        public Builder(String cliente, String direccionEnvio) {
+            if (cliente == null || cliente.isBlank())
+                throw new IllegalArgumentException(&quot;Cliente requerido&quot;);
+            this.cliente = cliente;
+            this.direccionEnvio = direccionEnvio;
+        }
+
+        // Métodos fluidos: cada uno devuelve 'this' para encadenar
+        public Builder producto(String producto) {
+            this.productos.add(producto);
+            return this;
+        }
+
+        public Builder tipoPago(String tipoPago) {
+            this.tipoPago = tipoPago;
+            return this;
+        }
+
+        public Builder envioExpress() {
+            this.envioExpress = true;
+            return this;
+        }
+
+        public Builder cupon(String cupon) {
+            this.cuponDescuento = cupon;
+            return this;
+        }
+
+        public Builder notas(String notas) {
+            this.notas = notas;
+            return this;
+        }
+
+        // build(): crea el objeto final
+        public Pedido build() {
+            if (productos.isEmpty())
+                throw new IllegalStateException(&quot;El pedido debe tener al menos un producto&quot;);
+            return new Pedido(this);
+        }
+    }
+}
+
+// Uso: API fluida y legible
+Pedido pedido = new Pedido.Builder(&quot;Ana García&quot;, &quot;Calle Mayor 1, Madrid&quot;)
+    .producto(&quot;Laptop&quot;)
+    .producto(&quot;Ratón&quot;)
+    .tipoPago(&quot;PayPal&quot;)
+    .envioExpress()
+    .cupon(&quot;DESCUENTO10&quot;)
+    .notas(&quot;Dejar en portería si no hay nadie&quot;)
+    .build();
+
+System.out.println(pedido);
+</code></pre>
+
+<h4 id="patron-strategy-algoritmos-intercambiables">Patrón Strategy — Algoritmos intercambiables</h4>
+<pre class="codehilite"><code class="language-java">// Interfaz Strategy: define el &quot;contrato&quot; del algoritmo
+public interface EstrategiaEnvio {
+    double calcularCosto(double peso, double distanciaKm);
+    String getNombre();
+}
+
+// Diferentes implementaciones del algoritmo
+public class EnvioEstandar implements EstrategiaEnvio {
+    @Override
+    public double calcularCosto(double peso, double distanciaKm) {
+        return 2.0 + peso * 0.5 + distanciaKm * 0.01;
+    }
+    @Override public String getNombre() { return &quot;Estándar (3-5 días)&quot;; }
+}
+
+public class EnvioExpress implements EstrategiaEnvio {
+    @Override
+    public double calcularCosto(double peso, double distanciaKm) {
+        return 10.0 + peso * 1.0 + distanciaKm * 0.05;
+    }
+    @Override public String getNombre() { return &quot;Express (24h)&quot;; }
+}
+
+public class EnvioDron implements EstrategiaEnvio {
+    @Override
+    public double calcularCosto(double peso, double distanciaKm) {
+        if (peso &gt; 2.0 || distanciaKm &gt; 10.0)
+            throw new IllegalArgumentException(&quot;El dron solo soporta &lt;2kg y &lt;10km&quot;);
+        return 5.0 + peso * 2.0;
+    }
+    @Override public String getNombre() { return &quot;Dron (2h)&quot;; }
+}
+
+// El &quot;contexto&quot; que usa la estrategia
+public class Carrito {
+    private EstrategiaEnvio estrategia;
+    private List&lt;String&gt; productos = new ArrayList&lt;&gt;();
+
+    public void setEstrategiaEnvio(EstrategiaEnvio estrategia) {
+        this.estrategia = estrategia; // Cambiamos la estrategia en tiempo de ejecución
+    }
+
+    public double calcularEnvio(double pesoTotal, double distancia) {
+        return estrategia.calcularCosto(pesoTotal, distancia);
+    }
+}
+
+// Uso:
+Carrito carrito = new Carrito();
+
+carrito.setEstrategiaEnvio(new EnvioEstandar());
+System.out.println(carrito.calcularEnvio(1.5, 100)); // Barato
+
+carrito.setEstrategiaEnvio(new EnvioExpress());
+System.out.println(carrito.calcularEnvio(1.5, 100)); // Más caro
+
+// Con lambdas (Strategy funcional):
+EstrategiaEnvio gratis = (peso, distancia) -&gt; 0.0;
+carrito.setEstrategiaEnvio(gratis);
+</code></pre>
+
+<h4 id="patron-observer-eventos-y-suscripciones">Patrón Observer — Eventos y suscripciones</h4>
+<pre class="codehilite"><code class="language-java">// El &quot;evento&quot; que se notifica
+public record EventoPedido(String tipoPedidoId, String tipo, String descripcion) {}
+
+// Interfaz Observer: quien quiere ser notificado
+public interface ObservadorPedido {
+    void onEvento(EventoPedido evento);
+}
+
+// Implementaciones de observadores
+public class NotificacionEmail implements ObservadorPedido {
+    @Override
+    public void onEvento(EventoPedido e) {
+        System.out.println(&quot;[EMAIL] Pedido &quot; + e.tipoPedidoId() + &quot;: &quot; + e.descripcion());
+    }
+}
+
+public class NotificacionSMS implements ObservadorPedido {
+    @Override
+    public void onEvento(EventoPedido e) {
+        System.out.println(&quot;[SMS] &quot; + e.tipo() + &quot; - &quot; + e.descripcion());
+    }
+}
+
+// El &quot;sujeto&quot; que lanza eventos
+public class SistemaPedidos {
+    private final List&lt;ObservadorPedido&gt; observadores = new ArrayList&lt;&gt;();
+
+    public void suscribir(ObservadorPedido obs) { observadores.add(obs); }
+    public void desuscribir(ObservadorPedido obs) { observadores.remove(obs); }
+
+    private void notificar(EventoPedido evento) {
+        observadores.forEach(obs -&gt; obs.onEvento(evento));
+    }
+
+    public void crearPedido(String id) {
+        // Lógica de negocio...
+        notificar(new EventoPedido(id, &quot;CREADO&quot;, &quot;Nuevo pedido recibido&quot;));
+    }
+
+    public void enviarPedido(String id) {
+        notificar(new EventoPedido(id, &quot;ENVIADO&quot;, &quot;Pedido en camino&quot;));
+    }
+}
+
+// Uso:
+SistemaPedidos sistema = new SistemaPedidos();
+sistema.suscribir(new NotificacionEmail());
+sistema.suscribir(new NotificacionSMS());
+sistema.suscribir(evento -&gt; System.out.println(&quot;[LOG] &quot; + evento)); // Lambda como Observer
+
+sistema.crearPedido(&quot;PED-001&quot;);
+sistema.enviarPedido(&quot;PED-001&quot;);
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 5.1:</strong>
+Construye un sistema de e-commerce completo que use: <strong>Builder</strong> para <code>Pedido</code>, <strong>Strategy</strong> para calcular descuentos (sin descuento, porcentaje, cantidad fija, 2x1), <strong>Observer</strong> para notificaciones (email, SMS, log). El sistema debe gestionar el ciclo completo de un pedido.</p>
+<hr />
+<h3 id="tema-52-testing-con-junit-5-y-mockito">Tema 5.2 — Testing con JUnit 5 y Mockito</h3>
+<h4 id="por-que-testear">¿Por qué testear?</h4>
+<p>El código sin tests es código que no sabes si funciona. Los tests automáticos te permiten refactorizar con confianza, detectar regresiones y documentar el comportamiento esperado.</p>
+<pre class="codehilite"><code class="language-java">// Dependencias en pom.xml:
+// junit-jupiter (JUnit 5), mockito-core, assertj-core
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.mockito.*;
+import static org.assertj.core.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+// La clase de test
+class CuentaBancariaTest {
+
+    // @Mock: crea un &quot;doble de prueba&quot; de la dependencia
+    // No llama código real, solo simula comportamiento
+    @Mock
+    private NotificacionService notificaciones;
+
+    // @InjectMocks: crea la clase bajo test, inyectando los @Mock automáticamente
+    @InjectMocks
+    private CuentaBancaria cuenta;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this); // Inicializa los mocks
+        // O usa @ExtendWith(MockitoExtension.class) a nivel de clase
+        cuenta = new CuentaBancaria(&quot;Ana&quot;, &quot;ES123&quot;, 100.0, notificaciones);
+    }
+
+    // ── TESTS BÁSICOS ─────────────────────────────────────────────────────
+
+    @Test
+    @DisplayName(&quot;Depositar cantidad positiva aumenta el saldo&quot;)
+    void depositarCantidadPositivaAumentaSaldo() {
+        // Given (preparación)
+        double saldoInicial = cuenta.getSaldo();
+
+        // When (acción)
+        cuenta.depositar(50.0);
+
+        // Then (verificación) — AssertJ: assertions fluidas y legibles
+        assertThat(cuenta.getSaldo()).isEqualTo(saldoInicial + 50.0);
+    }
+
+    @Test
+    @DisplayName(&quot;Retirar más del saldo lanza SaldoInsuficienteException&quot;)
+    void retirarMasSaldoLanzaExcepcion() {
+        assertThatThrownBy(() -&gt; cuenta.retirar(200.0))
+            .isInstanceOf(SaldoInsuficienteException.class)
+            .hasMessageContaining(&quot;100.0&quot;); // El mensaje menciona el saldo disponible
+    }
+
+    @Test
+    @DisplayName(&quot;Depositar cantidad negativa lanza IllegalArgumentException&quot;)
+    void depositarNegativoLanzaExcepcion() {
+        assertThatThrownBy(() -&gt; cuenta.depositar(-50.0))
+            .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    // ── TESTS CON MOCKITO ─────────────────────────────────────────────────
+
+    @Test
+    @DisplayName(&quot;Al depositar, se notifica al servicio de notificaciones&quot;)
+    void depositarNotificaAlServicio() {
+        // When
+        cuenta.depositar(50.0);
+
+        // Then: verifica que se llamó el método del mock con los argumentos correctos
+        verify(notificaciones).enviarNotificacion(
+            eq(&quot;Ana&quot;),
+            contains(&quot;50.0&quot;) // El mensaje contiene &quot;50.0&quot;
+        );
+    }
+
+    @Test
+    @DisplayName(&quot;Si falla el servicio de notificaciones, el depósito igual se realiza&quot;)
+    void depositarFuncionaAunqueFalleNotificacion() {
+        // Configurar el mock para que lance excepción
+        doThrow(new RuntimeException(&quot;Servicio caído&quot;))
+            .when(notificaciones).enviarNotificacion(any(), any());
+
+        // El depósito debe funcionar igual
+        assertThatCode(() -&gt; cuenta.depositar(50.0)).doesNotThrowAnyException();
+        assertThat(cuenta.getSaldo()).isEqualTo(150.0);
+    }
+
+    // ── TESTS PARAMETRIZADOS ──────────────────────────────────────────────
+
+    @ParameterizedTest
+    @ValueSource(doubles = {-1.0, 0.0, -100.0})
+    @DisplayName(&quot;Depositar cantidades no positivas lanza excepción&quot;)
+    void depositarCantidadesNoPositivasLanzaExcepcion(double cantidad) {
+        assertThatThrownBy(() -&gt; cuenta.depositar(cantidad))
+            .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    // ── TESTS ANIDADOS ────────────────────────────────────────────────────
+
+    @Nested
+    @DisplayName(&quot;Cuando el saldo es cero&quot;)
+    class CuandoSaldoCero {
+
+        @BeforeEach
+        void vaciarCuenta() {
+            cuenta.retirar(100.0);
+        }
+
+        @Test
+        @DisplayName(&quot;Cualquier retiro lanza excepción&quot;)
+        void retiroLanzaExcepcion() {
+            assertThatThrownBy(() -&gt; cuenta.retirar(0.01))
+                .isInstanceOf(SaldoInsuficienteException.class);
+        }
+
+        @Test
+        @DisplayName(&quot;Depositar funciona normalmente&quot;)
+        void depositarFunciona() {
+            assertThatCode(() -&gt; cuenta.depositar(50.0)).doesNotThrowAnyException();
+        }
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 5.2:</strong>
+Usando TDD (escribe el test ANTES del código): implementa <code>CarritoCompraService</code> con métodos para añadir/eliminar productos, calcular total, aplicar descuentos y calcular IVA por país. Escribe los tests primero (verán fallar en rojo), luego implementa para que pasen (verde), luego refactoriza. Alcanza &gt;85% de cobertura.</p>
+<hr />
+<h2 id="nivel-6-pro-absoluto">⚫ NIVEL 6 — PRO ABSOLUTO</h2>
+<hr />
+<h3 id="tema-61-virtual-threads-java-21">Tema 6.1 — Virtual Threads (Java 21+)</h3>
+<h4 id="el-problema-con-los-hilos-de-plataforma">El problema con los hilos de plataforma</h4>
+<p>Los hilos de plataforma son caros: cada uno consume ~1MB de memoria de stack. Un servidor con 10.000 conexiones simultáneas necesitaría 10GB solo en stacks de hilos. Por eso Spring WebFlux y la programación reactiva existen: para no bloquear hilos.</p>
+<p>Los <strong>Virtual Threads</strong> resuelven esto a nivel de JVM: son hilos gestionados por la JVM, ultraligeros (KB, no MB), que se pueden crear por millones.</p>
+<pre class="codehilite"><code class="language-java">import java.util.concurrent.*;
+
+public class VirtualThreads {
+    public static void main(String[] args) throws Exception {
+
+        // Crear un virtual thread
+        Thread vt = Thread.ofVirtual().start(() -&gt; {
+            System.out.println(&quot;Hola desde virtual thread: &quot; + Thread.currentThread());
+        });
+        vt.join();
+
+        // ExecutorService con virtual threads (el más importante en producción)
+        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+            // Crear 10.000 tareas concurrentes — con hilos normales esto sería desastroso
+            List&lt;Future&lt;String&gt;&gt; futuros = new ArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 10_000; i++) {
+                final int id = i;
+                futuros.add(executor.submit(() -&gt; {
+                    Thread.sleep(Duration.ofMillis(100)); // Simular I/O bloqueante
+                    return &quot;Resultado &quot; + id;
+                }));
+            }
+            // Esperar todos los resultados
+            for (Future&lt;String&gt; f : futuros) {
+                f.get();
+            }
+        }
+        System.out.println(&quot;¡10.000 tareas completadas con virtual threads!&quot;);
+
+        // Structured Concurrency (Java 21+)
+        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+            Future&lt;String&gt; usuario = scope.fork(() -&gt; buscarUsuario(&quot;123&quot;));
+            Future&lt;String&gt; pedidos = scope.fork(() -&gt; buscarPedidos(&quot;123&quot;));
+
+            scope.join().throwIfFailed(); // Espera ambos; si uno falla, cancela el otro
+
+            System.out.println(usuario.get() + &quot; | &quot; + pedidos.get());
+        }
+    }
+
+    static String buscarUsuario(String id) throws Exception {
+        Thread.sleep(200); return &quot;Usuario &quot; + id;
+    }
+    static String buscarPedidos(String id) throws Exception {
+        Thread.sleep(300); return &quot;3 pedidos de &quot; + id;
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 6.1:</strong>
+Implementa un servidor de "procesamiento de solicitudes" que maneje 1.000 solicitudes simultáneas usando virtual threads. Compara el tiempo y uso de memoria con un pool de 100 hilos de plataforma. Analiza los resultados.</p>
+<hr />
+<h3 id="tema-62-spring-boot-introduccion-al-ecosistema">Tema 6.2 — Spring Boot (Introducción al Ecosistema)</h3>
+<p>Spring Boot es el framework más usado en el ecosistema Java empresarial. Convierte lo que serían 500 líneas de configuración en unas pocas anotaciones.</p>
+<pre class="codehilite"><code class="language-java">// Dependencias básicas en pom.xml:
+// spring-boot-starter-web, spring-boot-starter-data-jpa, spring-boot-starter-test
+
+// ── ENTIDAD JPA ───────────────────────────────────────────────────────────
+@Entity
+@Table(name = &quot;productos&quot;)
+public class Producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String nombre;
+
+    @Column(nullable = false)
+    private double precio;
+
+    // Constructor, getters, setters...
+}
+
+// ── REPOSITORIO ───────────────────────────────────────────────────────────
+// Spring Data genera automáticamente las implementaciones de estos métodos
+public interface ProductoRepository extends JpaRepository&lt;Producto, Long&gt; {
+    List&lt;Producto&gt; findByNombreContainingIgnoreCase(String nombre);
+    List&lt;Producto&gt; findByPrecioBetween(double min, double max);
+    Optional&lt;Producto&gt; findFirstByOrderByPrecioDesc(); // El más caro
+}
+
+// ── SERVICIO ──────────────────────────────────────────────────────────────
+@Service // Spring lo gestiona como un bean singleton
+@Transactional
+public class ProductoService {
+
+    private final ProductoRepository repo;
+
+    // Inyección de dependencias por constructor (la forma recomendada)
+    public ProductoService(ProductoRepository repo) {
+        this.repo = repo;
+    }
+
+    public List&lt;Producto&gt; buscarPorNombre(String nombre) {
+        return repo.findByNombreContainingIgnoreCase(nombre);
+    }
+
+    public Producto crear(Producto producto) {
+        if (producto.getPrecio() &lt; 0)
+            throw new IllegalArgumentException(&quot;El precio no puede ser negativo&quot;);
+        return repo.save(producto);
+    }
+}
+
+// ── CONTROLADOR REST ──────────────────────────────────────────────────────
+@RestController // @Controller + @ResponseBody
+@RequestMapping(&quot;/api/productos&quot;)
+public class ProductoController {
+
+    private final ProductoService service;
+
+    public ProductoController(ProductoService service) {
+        this.service = service;
+    }
+
+    @GetMapping                           // GET /api/productos
+    public List&lt;Producto&gt; listar() {
+        return service.listarTodos();
+    }
+
+    @GetMapping(&quot;/{id}&quot;)                  // GET /api/productos/42
+    public ResponseEntity&lt;Producto&gt; buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id)
+                      .map(ResponseEntity::ok)
+                      .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping                          // POST /api/productos
+    @ResponseStatus(HttpStatus.CREATED)
+    public Producto crear(@RequestBody @Valid Producto producto) {
+        return service.crear(producto);
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)               // DELETE /api/productos/42
+    public ResponseEntity&lt;Void&gt; eliminar(@PathVariable Long id) {
+        service.eliminar(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+
+// ── CLASE PRINCIPAL ───────────────────────────────────────────────────────
+@SpringBootApplication // Combina @Configuration + @EnableAutoConfiguration + @ComponentScan
+public class MiAplicacion {
+    public static void main(String[] args) {
+        SpringApplication.run(MiAplicacion.class, args);
+        // ¡Eso es todo! Spring Boot configura Tomcat, JPA, etc. automáticamente
+    }
+}
+</code></pre>
+
+<p><strong>🏋️ EJERCICIO 6.2 — PROYECTO FINAL:</strong>
+Construye una API REST de gestión de tareas con Spring Boot que incluya: entidades <code>Usuario</code> y <code>Tarea</code>, repositorios Spring Data, capa de servicio con validaciones, controladores REST con manejo de errores global (<code>@ControllerAdvice</code>), y tests de integración. Documenta la API con comentarios describiendo cada endpoint.</p>
+<hr />
+<h2 id="recursos-recomendados">📚 RECURSOS RECOMENDADOS</h2>
+<h3 id="libros-en-orden-de-lectura">Libros (en orden de lectura)</h3>
+<ol>
+<li><em>Head First Java</em> — Sierra &amp; Bates (Niveles 1-2)</li>
+<li><em>Effective Java</em> — Joshua Bloch (Niveles 3-5) ← <strong>LA BIBLIA del desarrollador Java</strong></li>
+<li><em>Clean Code</em> — Robert C. Martin (Nivel 3+)</li>
+<li><em>Java Concurrency in Practice</em> — Goetz et al. (Nivel 4-5)</li>
+<li><em>Designing Data-Intensive Applications</em> — Kleppmann (Nivel 6)</li>
+<li><em>Domain-Driven Design</em> — Eric Evans (Nivel 6)</li>
+</ol>
+<h3 id="plataformas-de-practica">Plataformas de práctica</h3>
+<ul>
+<li><strong>LeetCode</strong> / <strong>HackerRank</strong> — algoritmos y estructuras de datos</li>
+<li><strong>Exercism.io</strong> — track de Java con mentores reales</li>
+<li><strong>Codewars</strong> — katas progresivos con comunidad</li>
+</ul>
+<h3 id="documentacion-oficial">Documentación oficial</h3>
+<ul>
+<li>https://docs.oracle.com/en/java/javase/21/</li>
+<li>https://openjdk.org/jeps/ — Java Enhancement Proposals (novedades del lenguaje)</li>
+</ul>
+<hr />
+<h2 id="hoja-de-ruta-dedicacion-seria-no-turismo">🗺️ HOJA DE RUTA (dedicación seria, no turismo)</h2>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Tiempo estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 Nivel 1</td>
+<td>2-3 semanas</td>
+</tr>
+<tr>
+<td>🔵 Nivel 2</td>
+<td>3-4 semanas</td>
+</tr>
+<tr>
+<td>🟡 Nivel 3</td>
+<td>4-5 semanas</td>
+</tr>
+<tr>
+<td>🟠 Nivel 4</td>
+<td>4-6 semanas</td>
+</tr>
+<tr>
+<td>🔴 Nivel 5</td>
+<td>6-8 semanas</td>
+</tr>
+<tr>
+<td>⚫ Nivel 6</td>
+<td>3-6 meses (aprendizaje continuo)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Regla de oro:</strong> No avances hasta que puedas explicar el tema anterior sin mirar notas. Si no puedes explicarlo simplemente, no lo has entendido del todo.</p>
+</blockquote>
+<hr />
+<p><em>"First, solve the problem. Then, write the code."</em> — John Johnson</p>
+<p><em>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</em> — Martin Fowler</p>
+    </div>
+</body>
+</html>
